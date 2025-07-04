@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
               rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -56,7 +56,9 @@
 /* Navbar social section */
 .Navbar-Social-Components{
   background-color: blue;
-  padding: 20px;
+  padding: 5px 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+              rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   /* center and put it on flex */
   display: flex;
   justify-content: center;
