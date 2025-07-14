@@ -15,13 +15,24 @@ const NavbarSocial = ({title, contact_title, email_title}) => {
       <div className='Navbar-Social-Title'>
         <h3>{title}</h3>
 
+        <div className='flex flex-row gap-6'>
+
         <div className='Social-Media-Icons'>
           <FaSquareInstagram />
+        </div>
+        <div className='Social-Media-Icons'>
           <FaFacebookSquare />
+        </div>
+        <div className='Social-Media-Icons'>
           <FaSquareYoutube />
-          <FaSquareXTwitter/>
+        </div>
+        <div className='Social-Media-Icons'>
           <FaLinkedin />
         </div>
+        <div className='Social-Media-Icons'>
+          <FaSquareXTwitter/>
+        </div>
+      </div>
       </div>
 
       <div className='Navbar-Contact'>
