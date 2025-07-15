@@ -30,7 +30,7 @@ const Navbar = () => {
 
       {/* Top Links */}
       <div className="top-links">
-        <ul className="flex flex-row gap-20">
+        <ul className="flex-row gap-20 hidden md:flex">
           <h1>OUR SCHOOL</h1>
           <h1>ABOUT US</h1>
         </ul>

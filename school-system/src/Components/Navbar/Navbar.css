@@ -147,6 +147,14 @@
 }
 
 
+/* small devices */
+@media screen and (max-width: 480px){
+  .Navbar-Social-Components{
+    /* center and put it on flex */
+    flex-direction: column;
+  }
+}
+
 
 
 
