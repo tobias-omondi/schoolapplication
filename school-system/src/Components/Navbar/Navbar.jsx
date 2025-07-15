@@ -3,6 +3,7 @@ import logo from "/src/assets/schoollogo.webp";
 import { CiMenuFries } from "react-icons/ci";
 import './Navbar.css';
 import NavbarSocial from './NavbarSocial';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -23,14 +24,14 @@ const Navbar = () => {
       {/* School Name */}
       <div className="school-name">
         <h1>
-          BrightOak <br />
-          <span className="px-15">Academy</span>
+          BrightOak 
+          <span className="text-blue-700 text-2xl">Academy</span>
         </h1>
       </div>
 
       {/* Top Links */}
       <div className="top-links">
-        <ul className="flex-row gap-20 hidden md:flex">
+        <ul className="flex-row gap-12 hidden md:flex">
           <h1>OUR SCHOOL</h1>
           <h1>ABOUT US</h1>
         </ul>
@@ -47,8 +48,8 @@ const Navbar = () => {
 
           <div className={`dropdown-menu ${IsMenuOpen ? 'open' : 'closed'}`}>
            <ul>
-             <li><a href="#home">HOME</a></li>
-             <li><a href="#about">ABOUT</a></li>
+             <li><Link to='/'>Home</Link ></li> 
+             <li><a href="#home">About us</a></li>
              <li><a href="#portfolio">CHILD PORTFOLIO</a></li>
           </ul>
           </div>

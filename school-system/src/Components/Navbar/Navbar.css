@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .Nav-bar-components {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* padding: 10px 20px; */
+  padding: 10px 20px;
   background-color: white;
+  width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
               rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .logo-top {
   width: 100px;
-  margin-top: 5px;
+  margin-top: 1px;
 }
 
 .school-name h1 {
@@ -66,13 +72,13 @@
 /* Navbar social section */
 .Navbar-Social-Components{
   background-color: blue;
-  padding: 5px 10px;
+  padding: 5px 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
               rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   /* center and put it on flex */
   display: flex;
-  justify-content: center;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 /* .Navbar-Social-Title{
@@ -162,7 +168,7 @@
 .dropdown-menu {
   position: absolute;
   top: 80px;
-  right: 1px;
+  right: 10px;
   width: 400px;
   height: 50%;
   background-color:rgb(35, 44, 82);
@@ -194,6 +200,34 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   color: white;
+  padding: 10px;
+}
+
+.dropdown-menu ul li {
+  border-bottom: 1px solid white;   
+  padding: 8px 0;
+  transition: background-color 0.3s ease;
+}
+
+/* .dropdown-menu ul li:last-child {
+  border-bottom: none;
+} */
+
+.dropdown-menu ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+  cursor: pointer;
+  border-bottom: 1px solid rgb(117, 115, 115);   
+}
+
+.dropdown-menu ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+}
+
+.dropdown-menu ul li a:hover {
+  color: #492afd; /* Optional: Change text color on hover */
 }
 
 

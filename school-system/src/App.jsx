@@ -1,16 +1,17 @@
-import { useState } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-
+import Hero from './Components/Navbar/HeroPage/Hero';
+import './App.css';
 
 function App() {
-
   return (
-    <>
-    <Navbar/>
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Hero />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

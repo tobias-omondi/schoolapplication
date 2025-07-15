@@ -1,0 +1,11 @@
+.hero-container{
+  width: 80%;
+  height: 100px;       
+  object-fit: cover;    
+  /* object-position: top left; */
+  left: 10px;
+  margin: 15px;
+}
+.hero-container img {
+  border-radius: 20px;
+}
