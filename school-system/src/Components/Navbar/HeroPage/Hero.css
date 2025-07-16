@@ -1,11 +1,16 @@
 .hero-container{
-  width: 80%;
-  height: 100px;       
-  object-fit: cover;    
-  /* object-position: top left; */
-  left: 10px;
-  margin: 15px;
+  width: 70%;
+  height: 100px;      
+  object-fit: cover;   
 }
+
 .hero-container img {
   border-radius: 20px;
+  margin: 20px;
+}
+
+.input-search{
+  padding: 10px;
+  border: 1px solid blue;
+  border-radius: 10px;
 }
