@@ -11,6 +11,10 @@ const Hero = () => {
 
       <div className='hero-container'>
         <img src={heroimage} alt='school students' />
+
+        <div>
+          <h1>Explore BrightOak Academy</h1>
+        </div>
       </div>
 
       {/* Search input with icon */}
