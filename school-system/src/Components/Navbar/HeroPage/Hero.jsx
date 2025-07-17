@@ -12,8 +12,12 @@ const Hero = () => {
       <div className='hero-container'>
         <img src={heroimage} alt='school students' />
 
-        <div>
+        <div className='hero-headings'>
           <h1>Explore BrightOak Academy</h1>
+          <p>We just don't give a students lectures but real life expirence</p>
+          <div className='hero-heading-button'>
+            <button type='submit'>Start Learning</button>
+          </div>
         </div>
       </div>
 

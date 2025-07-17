@@ -38,7 +38,7 @@ const NavbarSocial = ({title, contact_title, email_title}) => {
       <div className='Navbar-Contact'>
         <h3>{contact_title}</h3>
         <p>+254 756 798 298</p>
-        <p>+254 756 798 298</p>
+        {/* <p>+254 756 798 298</p> */}
       </div>
 
       <div className='Navbar-Email'>
