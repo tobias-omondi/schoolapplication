@@ -11,6 +11,7 @@ import heroimagethree from '/src/assets/schoolhero page.jpg';
 
 import { CiSearch } from "react-icons/ci";
 import './Hero.css';
+import HeroCards from './HeroCards';
 
 
 
@@ -45,6 +46,8 @@ const Hero = () => {
 
   
   return (
+    <>
+
     <div className='flex flex-row justify-evenly'>
 
       {/* Image Swiper section */}
@@ -109,6 +112,10 @@ const Hero = () => {
         </div>
       </div>
     </div>
+
+    <HeroCards />
+    
+    </>
   );
 };
 

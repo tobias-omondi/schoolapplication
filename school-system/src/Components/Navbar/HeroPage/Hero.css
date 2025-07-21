@@ -20,7 +20,7 @@
 /* heading title */
 .hero-headings{
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 30px;
   color: white;
   padding: 10px;
@@ -136,4 +136,57 @@
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   border-color: #0077cc;
   transform: scale(1.2);
+}
+
+
+/* hero components style */
+
+.herocards-container {
+  margin-top: 3rem;
+  padding: 10px;
+}
+
+.hero-card-container {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.hero-card-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background-color: white;
+  padding: 3.5rem;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  text-align: center;
+}
+
+.card-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #07a1fa;
+  font-family: "Lato", sans-serif;
+}
+
+.card-title{
+  font-size: 20px;
+  color: rgb(77, 77, 77);
+  margin: 0.5rem 0;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+}
+
+.card-description {
+  font-size: 14px;
+  color: rgb(77, 77, 77);
+  font-family: "Lato", sans-serif;
 }
