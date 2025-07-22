@@ -12,6 +12,7 @@ import heroimagethree from '/src/assets/schoolhero page.jpg';
 import { CiSearch } from "react-icons/ci";
 import './Hero.css';
 import HeroCards from './HeroCards';
+import HomeCards from '../../HomePage/HomeCards';
 
 
 
@@ -114,6 +115,10 @@ const Hero = () => {
     </div>
 
     <HeroCards />
+
+    <div className='mt-10'>
+      <HomeCards />
+    </div>
     
     </>
   );

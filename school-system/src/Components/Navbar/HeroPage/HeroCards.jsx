@@ -33,9 +33,9 @@ const HeroCards = () => {
 
     <AboutPart  title='Welcome to BrightOak Academy' 
                 description='At BrightOak Academy, we believe every child has the potential to achieve great things.
-We help learners enjoy education by making school a fun, safe, and welcoming place. We encourage creativity, curiosity, and self-confidence, while helping students grow in their studies and in how they relate with others.
+                             We help learners enjoy education by making school a fun, safe, and welcoming place. We encourage creativity, curiosity, and self-confidence, while helping students grow in their studies and in how they relate with others.
 
-Our goal is to support students in becoming responsible, kind, and confident individuals — ready for success in school, at home, and in life. At BrightOak, we don’t just teach for exams; we prepare children for the future.'
+                             Our goal is to support students in becoming responsible, kind, and confident individuals — ready for success in school, at home, and in life. At BrightOak, we don’t just teach for exams; we prepare children for the future.'
                 image={aboutpartimage}/>
     </>
   );
