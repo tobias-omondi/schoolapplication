@@ -29,7 +29,7 @@ const HomeCards = () => {
         )}
       </div>
 
-      {/* <> <SliderHome /></> */}
+      <> <SliderHome /></>
     </div>
   )
 }
