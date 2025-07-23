@@ -2,7 +2,6 @@ import React from 'react'
 
 
 // import swiper js components
-import Swiper from 'swiper'
 import { SwiperSlide, Swiper } from 'swiper/react'
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 

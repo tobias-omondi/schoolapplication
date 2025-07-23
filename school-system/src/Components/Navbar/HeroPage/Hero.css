@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Spicy+Rice&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
 .hero-container {
@@ -25,21 +26,27 @@
   color: white;
   padding: 10px;
   /* backdrop-filter: brightness(150%); */
-  text-shadow: 2px 2px #5e5e5e;
+  text-shadow: 2px 2px #000000;
 }
 
 .hero-headings h1{
-  font-size: 2.9rem;
+  font-size: 48px;
   font-weight: bolder;
-  font-family: "Lato", sans-serif;
   color: rgb(255, 255, 255);
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
   
 }
 
 .hero-headings p {
-  font-size: 1.5rem;
+  font-size: 26px;
   font-weight: bold;
-  font-family: "Lato", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 /* button for hero page section */
@@ -51,9 +58,10 @@
 .hero-heading-button button{
   background-color: rgb(255, 124, 16);
   padding: 10px 10px 10px 10px;
-  border-radius: 12px;
+  border-radius: 14px;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 16px;
   font-family: "Lato", sans-serif;
 }
 
@@ -76,22 +84,30 @@
   border-radius: 20px;
 }
 .hero-cards h1{
-   font-size: 1.3rem;
-  font-family: "Lato", sans-serif;
+   font-size: 22px;
   font-weight: 500;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(71, 71, 71);
+  margin-top: 10px;
 }
 
 .hero-cards p{
   width: 350px;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
   line-height: 1.5;
   padding: 10px 10px 10px 10px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(71, 71, 71);
 }
 .hero-cards-part2{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   margin-top: 5rem;
-  background: radial-gradient(circle at center, rgba(173, 216, 230, 0.3), rgba(255, 255, 255, 0));
+  /* background: radial-gradient(circle at center, rgba(173, 216, 230, 0.3), rgba(255, 255, 255, 0)); */
 
 
   border-radius: 18px 67px 14px 16px;
@@ -103,22 +119,29 @@
   margin-top: 0rem;
   font-family: "Lato", sans-serif;
   font-weight: 500;
-  color: rgb(29, 28, 28);
   font-size: 1.3rem;
+  color: rgb(71, 71, 71);
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 10px;
 }
 
 .hero-cards-part2 p{
   width: 350px;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
   line-height: 1.5;
   padding: 10px 10px 10px 10px;
-  color: rgb(29, 28, 28);
+  color: rgb(71, 71, 71);
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* swiper pagnition */
 .swiper-pagination-bullet {
-  width: 30px;
+  width: 20px;
   height: 20px;
   border-radius: 8px;
   overflow: hidden;
@@ -171,9 +194,11 @@
 
 .card-number {
   font-size: 28px;
-  font-weight: bold;
   color: #07a1fa;
-  font-family: "Lato", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .card-title{
@@ -181,12 +206,24 @@
   color: rgb(77, 77, 77);
   margin: 0.5rem 0;
   font-size: 18px;
-  font-weight: 500;
-  font-family: "Lato", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .card-description {
   font-size: 14px;
   color: rgb(77, 77, 77);
-  font-family: "Lato", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.herolast-fonts{
+  color: rgb(77, 77, 77);
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }

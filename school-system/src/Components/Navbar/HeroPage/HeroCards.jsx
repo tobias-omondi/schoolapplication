@@ -26,8 +26,10 @@ const HeroCards = () => {
         </ul>
       </div>
 
+      <div className='herolast-fonts'>
       <div className='text-center text-gray-700'>
         <h2>Learn anywhere anytime</h2>
+      </div>
       </div>
     </div>
 
