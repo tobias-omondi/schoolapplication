@@ -1,5 +1,133 @@
-.footer-container{
-  /* background-color: #002B5B; */
-  background: linear-gradient(90deg, #0F93FF 0%, #005F99 100%);
-  padding: 50px;
+/* Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.footer-container-level {
+  background-color: #002B5B;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.school-footerlogo-container {
+  flex: 1 1 250px;
+}
+
+.school-footerlogo-container img {
+  border-radius: 100px;
+  width: 120px;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.footer-description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+  max-width: 300px;
+}
+
+.footer-web-column,
+.footer-facilities-column,
+.footer-contact-column {
+  flex: 1 1 200px;
+}
+
+.footer-web-column h1,
+.footer-facilities-column h1,
+.footer-contact-column h1 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-web-links ul,
+.footer-facilities-links ul,
+.footer-contact-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-web-links ul li a,
+.footer-facilities-links ul li a,
+.footer-contact-list ul li a {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-web-links ul li a:hover,
+.footer-facilities-links ul li a:hover,
+.footer-contact-list ul li a:hover {
+  color: #9b9898;
+}
+
+.footer-social-links ul {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.footer-social-links ul li {
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.footer-copyright {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-web-column,
+  .footer-facilities-column,
+  .footer-contact-column {
+    flex: 1 1 100%;
+  }
+
+  .school-footerlogo-container img {
+    margin: 0 auto;
+  }
+
+  .footer-title,
+  .footer-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-social-links ul {
+    justify-content: center;
+  }
 }
