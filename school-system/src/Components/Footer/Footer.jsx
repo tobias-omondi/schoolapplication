@@ -3,7 +3,8 @@ import './Footer.css'
 
 // import school logo 
 import logopng from '/src/assets/schoollogo.webp'
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
@@ -55,19 +56,26 @@ const Footer = () => {
           <h1>CONTACT US</h1>
           <div className='footer-contact-list'>
             <ul>
-              <li><a href='/'>EMAIL</a></li>
+              <li><a href='/'>EMAIL:<span>brightoak@gmailinfo.com</span></a></li>
               <li><a href='/aboutus'>LOCATION</a></li>
               <li><a href='/blog'>CONTACT US</a></li>
-              <li><a href='/gallery'>SOCIAL LINKS</a></li>
               <div className='footer-social-links'>
                 <ul>
                   <li><FaInstagram /></li>
-                  <li><FaTwitter /></li>
+                  <li><FaXTwitter /></li>
                   <li><FaYoutube/></li>
                   <li><FaFacebook /></li>
+                  <li><FaLinkedin /></li>
                 </ul>
               </div>
-              <li><a href='/news&events'>SUBSCRIBE TO OUR NEWS</a></li>
+
+              <div className="footer-subscribe">
+                <p>Subscribe to our newsletter</p>
+                <form className="footer-subscribe-form" onSubmit={(e) => e.preventDefault()}>
+                  <input type="email" placeholder="Enter your email" required />
+                  <button type="submit">Subscribe</button>
+                </form>
+              </div>
             </ul>
           </div>
         </div>

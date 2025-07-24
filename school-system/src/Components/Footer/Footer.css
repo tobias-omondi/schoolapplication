@@ -94,13 +94,55 @@
 
 .footer-copyright {
   border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  padding: 15px 10px;
+  padding: 20px 10px;
   text-align: center;
   font-size: 13px;
   color: #aaa;
   margin-top: 30px;
+  width: 50%;
+  margin: 0 auto;
 }
+
+/* Add to Footer.css */
+.footer-subscribe {
+  margin-top: 20px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+.footer-subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-subscribe-form input {
+  padding: 10px;
+  border: 1px solid blanchedalmond;
+  border-radius: 5px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+
+}
+
+.footer-subscribe-form button {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-subscribe-form button:hover {
+  background-color: #0056b3;
+}
+
 
 /* Responsive */
 @media screen and (max-width: 768px) {
