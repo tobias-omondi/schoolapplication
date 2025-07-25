@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import './Hero.css';
 import AboutPart from './AboutHeroPage/AboutPart';
@@ -5,26 +6,35 @@ import AboutPart from './AboutHeroPage/AboutPart';
 // import aboutpart image
  import aboutpartimage from '/src/assets/unnamed.jpg'
 
+import { motion, px } from "motion/react"
+import { FaBookReader, FaCheck } from 'react-icons/fa';
+import { FaBasketball } from 'react-icons/fa6';
+
 const heroCards = [
-  { id: 1, number: "I", title: "Active Learning", description: 'We promote hands-on education and real-world experience.' },
-  { id: 2, number: "II", title: "Happy Environment", description: 'Our students thrive in a safe and joyful school culture.' },
-  { id: 3, number: "III", title: "Enrichment Programs", description: 'We offer music, sports, coding, and more for full development.' }
+  { id: 1, number: "I", title: "Active Learning", description: 'We promote hands-on education and real-world experience.', icon : <FaBookReader /> },
+  { id: 2, number: "II", title: "Happy Environment", description: 'Our students thrive in a safe and joyful school culture.', icon: <FaCheck /> },
+  { id: 3, number: "III", title: "Enrichment Programs", description: 'We offer music, sports, coding, and more for full development.' , icon: <FaBasketball /> }
 ];
 
 const HeroCards = () => {
   return (
     <>
     <div className="herocards-container">
-      <div className="hero-card-container">
+      <motion.div
+      initial = {{opacity: 0.7}}
+      whileInView={{ opacity: 1, y: 0, }}
+      transition={{duration: 1, ease: 'easeInOut'}}
+      className="hero-card-container">
         <ul>
           {heroCards.map(card => (
             <li key={card.id} className="hero-card">
               <span className="card-number">{card.number}  <span className='card-title'>{card.title}</span></span>
-              <p className="card-description">{card.description}</p>
+              <p className="card-description">{card.description} </p>
+              <h4><span className='text-3xl text-blue-500'>{card.icon}</span></h4>
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
 
       <div className='herolast-fonts'>
       <div className='text-center text-gray-700'>

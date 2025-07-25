@@ -14,6 +14,7 @@
 .home-cards-heading{
   width: 600px;
   height: 280px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
@@ -38,6 +39,43 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .home-cards-heading {
+    width: 90%;
+    height: auto;
+  }
+
+  .headings-home-cards h1 {
+    font-size: 28px;
+  }
+
+  .headings-home-cards p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-cards-components {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-cards-heading {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .headings-home-cards h1 {
+    font-size: 24px;
+  }
+
+  .headings-home-cards p {
+    font-size: 14px;
+  }
 }
 
 
