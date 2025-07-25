@@ -56,7 +56,7 @@ const Hero = () => {
       <div className='hero-container'>
         <Swiper
           direction="vertical"
-          className="h-[600px]" 
+          className="h-[570px]" 
           loop={true}
           modules={[Pagination, Autoplay, EffectFade]}
           pagination={{ clickable: true }}
