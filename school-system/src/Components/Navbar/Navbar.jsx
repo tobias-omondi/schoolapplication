@@ -5,15 +5,16 @@ import { CiMenuFries } from 'react-icons/ci';
 import { IoClose } from 'react-icons/io5';
 import logo from '/src/assets/schoollogo.webp';
 import { Link, useLocation } from 'react-router-dom';
+import { IoIosLogIn } from 'react-icons/io';
 
 const navLinks = [
   { id: 1, name: 'Home', path: '/' },
-  { id: 2, name: 'About Us', path: '/aboutus' },
+  { id: 2, name: 'About', path: '/aboutus' },
   { id: 3, name: 'Class Profile', path: '/classprofile' },
   { id: 4, name: 'Blog', path: '/blog' },
   { id: 5, name: 'Portfolio', path: '/portfolio' },
   { id: 6, name: 'Contact', path: '/contact' },
-  { id: 7, name: 'Login', path: '/login' },
+  { id: 7, name: <IoIosLogIn />, path: '/login' },
 ];
 
 const Navbar = () => {
