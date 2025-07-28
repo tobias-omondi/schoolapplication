@@ -1,0 +1,67 @@
+/* Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.news-title,
+.news-title h1 {
+  font-size: 22px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(71, 70, 70);
+  padding: 20px;
+}
+
+.newsdata-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+}
+
+.newsdata-container div {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsdata-container div:hover {
+  transform: translateY(-5px);
+}
+
+.newsdata-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.newsdata-container h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 12px;
+  color: #253846;
+}
+
+.newsdata-container p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 12px 12px;
+  line-height: 1.4;
+}
+
+
+.news-btn{
+  padding-left: 20px;
+}
+.news-btn button{
+  display: flex;
+  background-color: rgb(20, 128, 216);
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  color: #f1f1f1;
+  cursor: pointer;
+}

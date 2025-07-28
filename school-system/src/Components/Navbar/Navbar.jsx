@@ -35,10 +35,11 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="School Logo" 
-              className="w-12 h-12 object-contain rounded-lg" 
+              className="w-15 h-15 object-contain rounded-lg" 
             />
             <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
-               BrightOak{" "}
+               {/* BrightOak */}
+               {" "}
                           {"Academy".split("").map((char, i) => (
                             <motion.span
                               key={i}

@@ -14,6 +14,7 @@ import './Hero.css';
 import HeroCards from './HeroCards';
 import Footer from '../Footer/Footer';
 import HomeCards from '../HomePage/HomeCards';
+import NewsComponents from './NewsComponents';
 
 
 
@@ -137,6 +138,10 @@ const Hero = () => {
 
     <div className='mt-10'>
       <HomeCards />
+    </div>
+
+    <div className='mt-10'>
+      <NewsComponents  title="Latest News"/>
     </div>
 
     <div className='mt-10'>
