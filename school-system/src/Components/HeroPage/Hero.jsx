@@ -16,6 +16,11 @@ import Footer from '../Footer/Footer';
 import HomeCards from '../HomePage/HomeCards';
 import NewsComponents from './NewsComponents';
 
+// import framer motion
+
+import { motion} from "motion/react"
+import { delay } from 'motion';
+
 
 
 const slideData = [
@@ -77,7 +82,7 @@ const Hero = () => {
           direction={direction}
           className="h-[570px]" 
           loop={true}
-          modules={[Pagination, Autoplay, EffectFade]}
+          modules={[Pagination, Autoplay, EffectFade,]}
           pagination={{ clickable: true }}
           autoplay={{ delay: 6000 }}
         >
@@ -87,7 +92,7 @@ const Hero = () => {
                 <img src={slide.img} alt={`slide-${index}`} className='swiper-image' />
 
                 <div className='hero-headings'>
-                  <h1 data-aos="fade-up">{slide.title}</h1>
+                  <h1>{slide.title}</h1>
                   <p data-aos="fade-up"
                   >{slide.desc}</p>
                   <div className='hero-heading-button'>
@@ -103,7 +108,7 @@ const Hero = () => {
       {/* Search + Hero Cards */}
       <div className='flex flex-col'>
         {/* Search input */}
-        <div className='relative mt-14 p-10' style={{ marginTop: '1.3rem' }}>
+        {/* <div className='relative mt-14 p-10' style={{ marginTop: '1.3rem' }}>
           <input
             type='search'
             id='search'
@@ -111,26 +116,26 @@ const Hero = () => {
             className='input-search'
           />
           <CiSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-800 text-xl' />
-        </div>
+        </div> */}
 
         {/* School card */}
-        <div className='hero-cards'>
+        {/* <div className='hero-cards'>
           <h1 className='text-center'>OUR SCHOOL</h1>
           <p className='text-center w-1/2'>
             BrightOak Academy is a forward-thinking school committed to academic excellence and holistic development.
             We foster a supportive environment that nurtures critical thinking, creativity, and character. Our goal is
             to empower students with the skills and values needed to succeed in a dynamic world.
           </p>
-        </div>
+        </div> */}
 
         {/* Vision card */}
-        <div className='hero-cards-part2'>
+        {/* <div className='hero-cards-part2'>
           <h1 className='text-center'> Our Vision</h1>
           <p className='text-center w-1/2'>
             We envision a nurturing learning environment where every child discovers their full potential and grows into
             a responsible, confident, and compassionate leader.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
 

@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div 
-            className="flex items-center gap-3"
+            className="flex items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -37,7 +37,7 @@ const Navbar = () => {
               alt="School Logo" 
               className="w-15 h-15 object-contain rounded-lg" 
             />
-            <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
+            <h1 className="text md:text-xl font-bold text-gray-800 tracking-tight">
                {/* BrightOak */}
                {" "}
                           {"Academy".split("").map((char, i) => (
