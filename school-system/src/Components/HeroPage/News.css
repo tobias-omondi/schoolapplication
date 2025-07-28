@@ -41,6 +41,9 @@
   font-weight: 700;
   margin: 12px;
   color: #253846;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
 }
 
 .newsdata-container p {
@@ -48,6 +51,9 @@
   color: #555;
   margin: 0 12px 12px;
   line-height: 1.4;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
 
 
