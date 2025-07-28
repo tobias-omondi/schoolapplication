@@ -2,8 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
+.hero-container-file{
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: center;
+  margin: 10px;
+}
+
 .hero-container {
-  width: 70%;
+  width: 80%;
   position: relative;
   margin-top: 10px;
 }
@@ -14,7 +21,7 @@
   border-radius: 20px;
   object-fit: cover;
   opacity: 1;
-  filter: brightness(1);
+  filter: brightness(60%);
   
 }
 
@@ -42,7 +49,7 @@
 }
 
 .hero-headings p {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
@@ -227,4 +234,39 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+
+/* mobile phone devvices */
+@media screen and (max-width:780px){
+
+.hero-container-file{
+  flex-direction: column;
+  margin: 5px;
+}
+
+.hero-container {
+  width: 100%;
+  position: relative;
+  margin-top: 5px;
+}
+
+/* heading title */
+.hero-headings{
+  position: absolute;
+  top: 30%;
+  left: 30px;
+  color: white;
+}
+
+.hero-headings h1{
+  font-size: 32px;
+  font-weight: bolder;  
+}
+
+.hero-headings p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 }

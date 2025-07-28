@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -46,16 +46,34 @@ const slideData = [
 
 const Hero = () => {
 
+  const [direction, setDirection] = useState('horizontal')
+
+  // change the direction based on screen devices
+
+  useEffect (() =>{
+    const handleResize = () => {
+      if (window.innerWidth >= 1024){
+        setDirection('vertical');
+      }else{
+        setDirection('horizontal');
+      }
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return ()=> window.removeEventListener('resize', handleResize);
+  }, []);
+
   
   return (
     <>
 
-    <div className='flex flex-row justify-evenly'>
+    <div className='hero-container-file'>
 
       {/* Image Swiper section */}
       <div className='hero-container'>
         <Swiper
-          direction="vertical"
+          direction={direction}
           className="h-[570px]" 
           loop={true}
           modules={[Pagination, Autoplay, EffectFade]}
