@@ -16,7 +16,7 @@ const homeCards = [
   }
 ]
 
-const colors = ['#0077cc', '#253846']
+// const colors = ['#0077cc', '#253846']
 
 const HomeCards = () => {
   return (
@@ -26,12 +26,6 @@ const HomeCards = () => {
           <motion.div
             key={cards.id}
             className='home-cards-heading'
-            style={{
-              backgroundColor: colors[index % colors.length],
-              padding: '20px',
-              margin: '10px',
-              color: '#fff',
-            }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}

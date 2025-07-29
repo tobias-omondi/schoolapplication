@@ -20,10 +20,18 @@
 }
 
 .newsdata-container div {
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+}
+
+.newsdata-container div:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 12px, 
+              rgba(56, 177, 247, 0.22) 0px 6px 6px;
 }
 
 .newsdata-container div:hover {

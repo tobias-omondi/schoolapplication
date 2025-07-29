@@ -6,7 +6,7 @@ import AboutPart from './AboutHeroPage/AboutPart';
 // import aboutpart image
  import aboutpartimage from '/src/assets/unnamed.jpg'
 
-import { motion, px } from "motion/react"
+import { motion} from "motion/react"
 import { FaBookReader, FaCheck } from 'react-icons/fa';
 import { FaBasketball } from 'react-icons/fa6';
 

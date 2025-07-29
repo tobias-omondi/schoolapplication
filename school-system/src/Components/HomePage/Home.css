@@ -2,42 +2,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 .home-cards-components {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 10px;
   justify-content: center;
+  justify-content: space-evenly;
   padding: 10px;
   
 }
 
 .home-cards-heading{
-  width: 600px;
-  height: 280px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  height: 0 auto;
+  padding: 20px 10px;
+  /* max-width: 500px; */
+  margin: 0 auto;
+  background-color: white;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.home-cards-heading:hover {
+  transform: translateY(-8px) scale(1.03); /* Moves card up + slight scale */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 12px, 
+              rgba(50, 167, 245, 0.22) 0px 6px 6px; /* Stronger shadow */
+   color: #0077cc; /* Highlight color */
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
 .headings-home-cards h1{
   font-size: 32px;
   text-align: center;
-  margin: 10px;
-  color: rgb(206, 203, 203);
+  padding: 3px;
+  color: rgb(70, 68, 68);
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .headings-home-cards p{
   font-size: 16px;
   text-align: center;
   margin-bottom: 10px;
-  color: rgb(206, 203, 203);
+  color: rgb(88, 85, 85);
   line-height: 1.5;
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  padding: 10px;
   font-style: normal;
 }
 

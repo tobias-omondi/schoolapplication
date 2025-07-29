@@ -98,6 +98,7 @@
 .herocards-container {
   margin-top: 3rem;
   padding: 10px;
+ 
 }
 
 .hero-card-container {
@@ -121,6 +122,13 @@
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 12px, 
+              rgba(56, 177, 247, 0.22) 0px 6px 6px;
 }
 
 .card-number {
