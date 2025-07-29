@@ -20,6 +20,7 @@ import NewsComponents from './NewsComponents';
 
 import { motion} from "motion/react"
 import { delay } from 'motion';
+import GallerySection from '../HomePage/GallerySection';
 
 
 
@@ -143,6 +144,10 @@ const Hero = () => {
 
     <div className='mt-10'>
       <HomeCards />
+    </div>
+
+    <div className='mt-10'>
+      <GallerySection  title="Latest News"/>
     </div>
 
     <div className='mt-10'>

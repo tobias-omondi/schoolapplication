@@ -16,7 +16,6 @@ const homeCards = [
   }
 ]
 
-// const colors = ['#0077cc', '#253846']
 
 const HomeCards = () => {
   return (
@@ -38,6 +37,7 @@ const HomeCards = () => {
           </motion.div>
         ))}
       </div>
+      
 
       <SliderHome />
     </div>
