@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
+from django.contrib.auth.models import User
 
 
 # ---- CLASS MODEL ----
@@ -13,12 +14,17 @@ class Class(models.Model):
 
     def __str__(self):
         return f"{self.class_name} ({self.level_type})"
+    
+
 
 
 # ---- TEACHERS MODEL ----
 class Teachers(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='teachers_profile')
     full_name = models.CharField(max_length=50)
-    email = models.EmailField(unique=True)
+    school_email = models.EmailField(unique=True)
+    phone_number = models.CharField(max_length=15, blank=False, null= False)
+    created_at = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return self.full_name
@@ -30,6 +36,9 @@ class Students(models.Model):
     username = models.CharField(max_length= 20, unique=True, null= True , blank= True)
 
     student_class = models.ForeignKey( Class, on_delete=models.CASCADE, related_name='students' )
+    teacher = models.ForeignKey(Teachers, on_delete=models.SET_NULL, related_name='students', null=True)
+    created_at = models.DateField(auto_now_add=True)
+
 
     def __str__(self):
         return self.full_name
@@ -39,13 +48,41 @@ class Students(models.Model):
 class StudentsPortfolio(models.Model):
     student = models.OneToOneField(Students, on_delete=models.CASCADE, related_name='portfolio')
     profile = models.ImageField(upload_to='profiles/')
-    description = models.CharField(max_length=200)
-    subjects = models.CharField(max_length=100)
-    achievements = models.CharField(max_length=200)
-    score = models.PositiveIntegerField(default=0)
+    title = models.CharField(max_length=10)
+    description = models.CharField(max_length=300)   #---ABOUT ME FROM A CHILD INPUT----
 
     def __str__(self):
         return f"Portfolio of {self.student.full_name}"
+    
+class  PortfolioAchievements(models.Model):
+    portfolio = models.ForeignKey(StudentsPortfolio, on_delete=models.CASCADE, related_name='term_records')
+    term_name = models.CharField(max_length=20)
+    score = models.PositiveIntegerField()
+    grade = models.CharField (max_length=7)
+    achievements = models.TextField(blank=True)
+    Avatar = models.ImageField(upload_to='avatars/')
+    created_at = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+         return f"{self.term_name} - {self.portfolio.student.full_name}"
+
+#----SUBJECTS PORTFOLIO---
+class Subjects (models.Model):
+    portfolio = models.ForeignKey(StudentsPortfolio, on_delete=models.CASCADE, related_name='subjects')
+    mathematics = models.PositiveIntegerField(null=True, blank=True)
+    English = models.PositiveIntegerField(null=True, blank=True)
+    Kiswahili = models.PositiveIntegerField(null=True, blank=True)
+    Science = models.PositiveIntegerField(null=True, blank=True)
+    religiuos_education = models.PositiveIntegerField(null=True, blank=True)
+    enviromental_activities = models.PositiveIntegerField(null=True, blank=True)
+    creative_arts = models.PositiveIntegerField(null=True, blank=True)
+    agricuture = models.PositiveIntegerField(null=True, blank=True)
+    physics = models.PositiveIntegerField(null=True, blank=True)
+    health_eduction = models.PositiveIntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return f"Subjects for {self.portfolio.student.full_name}"
+
 
 
 # ---- PARENTS MODEL ----
@@ -57,8 +94,15 @@ class Parents(models.Model):
     def __str__(self):
         return f"{self.full_name} (Parent of {self.student.full_name})"
     
-class PortfolioComments (models.Model):
-    pass
+# ---- TEACHER COMMENTS ----
+class TeacherComments(models.Model):
+    teacher = models.ForeignKey(Teachers, on_delete=models.CASCADE, related_name='comments')
+    student = models.ForeignKey(Students, on_delete=models.CASCADE, related_name='teacher_comments')
+    comment = models.TextField(max_length=300)
+    created_at = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Comment by {self.teacher.full_name} on {self.student.full_name}"
 
 
 
