@@ -45,7 +45,7 @@ class Students(models.Model):
 
 
 # ---- STUDENT PORTFOLIO ----
-class StudentsPortfolio(models.Model):
+class StudentsProfile (models.Model):
     student = models.OneToOneField(Students, on_delete=models.CASCADE, related_name='portfolio')
     profile = models.ImageField(upload_to='profiles/')
     title = models.CharField(max_length=50)
@@ -55,7 +55,7 @@ class StudentsPortfolio(models.Model):
         return f"Portfolio of {self.student.full_name}"
     
 class  PortfolioAchievements(models.Model):
-    portfolio = models.ForeignKey(StudentsPortfolio, on_delete=models.CASCADE, related_name='term_records')
+    portfolio = models.ForeignKey (StudentsProfile, on_delete=models.CASCADE, related_name='term_records')
     term_one = models.CharField(max_length=20)
     term_two = models.CharField(max_length=20)
     term_three = models.CharField(max_length=20)
@@ -70,7 +70,7 @@ class  PortfolioAchievements(models.Model):
 
 #----SUBJECTS PORTFOLIO---
 class Subjects (models.Model):
-    portfolio = models.ForeignKey(StudentsPortfolio, on_delete=models.CASCADE, related_name='subjects')
+    portfolio = models.ForeignKey (StudentsProfile, on_delete=models.CASCADE, related_name='subjects')
     mathematics = models.PositiveIntegerField(null=True, blank=True)
     english = models.PositiveIntegerField(null=True, blank=True)
     kiswahili = models.PositiveIntegerField(null=True, blank=True)
