@@ -34,7 +34,7 @@ const Navbar = () => {
       <nav className="w-full backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-gray-100 ">
 
         <div className="max-w-7xl mx-auto px-2 flex justify-between items-center h-20">
-
+          
           {/* Logo */}
           <motion.div 
             className="flex items-center"
