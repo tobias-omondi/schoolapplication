@@ -19,8 +19,8 @@ const navLinks = [
 ];
 
 const portfolioDropdownLinks = [
-  { id: 1, name: 'Student Portfolio', path: '/portfolio/student', icon: <FaUserGraduate className="text-blue-500" /> },
-  { id: 2, name: 'Teacher Dashboard', path: '/portfolio/teacher', icon: <FaChalkboardTeacher className="text-blue-500" /> },
+  { id: 1, name: 'Student Portfolio', path: '/student/portfolio/login', icon: <FaUserGraduate className="text-blue-500" /> },
+  { id: 2, name: 'Teacher Dashboard', path: '/teachers/panel/login', icon: <FaChalkboardTeacher className="text-blue-500" /> },
 ];
 
 const Navbar = () => {
