@@ -3,7 +3,7 @@ import { motion} from 'framer-motion'
 
 const TeachersLogin = () => {
   return (
-    <motion.div className='flex justify-evenly h-[100vh] mx-auto shadow hover:shadow-blue-300 max-w-6xl mt-4 bg-white'
+    <motion.div className='flex justify-evenly mx-auto shadow-xl p-10 hover:shadow-blue-300 max-w-6xl mt-4 bg-white'
     initial = {{opacity: 0, y: 100}}
     whileInView={{opacity:1, y: 0}}
     transition={{duration: 0.8}}>
