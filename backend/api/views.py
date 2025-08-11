@@ -6,6 +6,9 @@ from rest_framework import viewsets
 from .models import Students, Class , Teachers , StudentsProfile , PortfolioAchievements , Subjects , Parents, TeacherComments , News , Blog
 from .serializers import StudentSerializer ,ClassSerializer , TeacherSerializer ,StudentProfileSerializer , SubjectsSerializer , PortfolioSerializer , ParentsSerializer ,TcommentsSerializer , NewsSerializer , BlogSerializer
 
+from rest_framework.permissions import IsAuthenticated
+
+
 # --CLASS VIEWSET--
 
 class ClassViewSet (viewsets.ModelViewSet):
@@ -19,6 +22,8 @@ class ClassViewSet (viewsets.ModelViewSet):
 class StudentViewSet(viewsets.ModelViewSet):
     queryset = Students.objects.all()
     serializer_class = StudentSerializer
+  
+
 
 
 # -- TEACHERS VIEWSET--
@@ -27,6 +32,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
     queryset = Teachers.objects.all()
 
     serializer_class = TeacherSerializer
+    permission_classes = [IsAuthenticated]
 
 
 # --STUDENT PORTFOLIO VIEWSET--
@@ -36,6 +42,7 @@ class StudentProfileViewSet (viewsets.ModelViewSet):
     queryset = StudentsProfile.objects.all()
 
     serializer_class = StudentProfileSerializer
+    permission_classes = [IsAuthenticated]
 
 # --PORTFOLIO VIEWSET--
 
