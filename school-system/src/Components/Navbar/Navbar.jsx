@@ -72,7 +72,7 @@ const Navbar = () => {
 
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => {
               if (link.id === 5) { // Portfolio link
                 return (
@@ -144,7 +144,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <motion.div 
-            className="md:hidden z-50"
+            className="lg:hidden z-50"
             whileTap={{ scale: 0.95 }}
           >
             <button
@@ -165,7 +165,7 @@ const Navbar = () => {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="md:hidden bg-white overflow-hidden shadow-lg"
+              className="lg:hidden bg-white overflow-hidden shadow-lg"
             >
               <div className="px-6 py-3 space-y-2">
                 {navLinks.map((link) => {
