@@ -55,7 +55,7 @@ const TeachersLogin = () => {
   return (
     <>
       <motion.div 
-        className="mx-auto flex flex-col md:flex-row justify-between items-center my-8 p-6 bg-white rounded-2xl w-full"
+        className="mx-auto flex flex-col md:flex-row justify-between items-center my-2 p-6 bg-white rounded-2xl w-full"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -114,7 +114,7 @@ const TeachersLogin = () => {
                 <motion.input 
                   type="text" 
                   id="Uname"  
-                  className="w-3/4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none font-serif"
+                  className="w-full md:w-3/4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none font-serif"
                   placeholder="Enter your username"
                   whileFocus={inputFocusEffect}
                   initial={{ x: -20, opacity: 0 }}
@@ -131,7 +131,7 @@ const TeachersLogin = () => {
                   type="password" 
                   id="Password" 
                   required  
-                  className="w-3/4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none font-serif"
+                  className="w-full md:w-3/4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none font-serif"
                   placeholder="Enter your password"
                   whileFocus={inputFocusEffect}
                   initial={{ x: -20, opacity: 0 }}
