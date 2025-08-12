@@ -89,7 +89,7 @@ const TeachersLogin = () => {
             variants={itemVariants}
           >
             <motion.p 
-              className='text-start font-serif'
+              className='md:text-start font-serif text-center'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
