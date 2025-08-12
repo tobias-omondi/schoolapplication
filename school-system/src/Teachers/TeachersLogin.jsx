@@ -55,7 +55,7 @@ const TeachersLogin = () => {
   return (
     <>
       <motion.div 
-        className="mx-auto flex flex-col md:flex-row justify-between items-center my-2 p-6 bg-white rounded-2xl w-full"
+        className="mx-auto flex flex-col md:flex-row justify-between items-center my-2 p-6 rounded-2xl w-full"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -177,7 +177,7 @@ const TeachersLogin = () => {
               >
                 <motion.button 
                   type="submit" 
-                  className="w-1/2 bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 shadow-md cursor-pointer font-serif"
+                  className="w-1/2 bg-blue-600 text-white py-3 px-6 rounded-full font-medium hover:bg-blue-700 shadow-md cursor-pointer font-serif"
                   initial={{ opacity: 0 }}
                   animate={{ 
                     opacity: 1,
@@ -223,7 +223,7 @@ const TeachersLogin = () => {
           <motion.img 
             src={teacherimge} 
             alt="teacher"  
-            className="w-full max-w-md object-cover rounded-xl shadow-lg brightness-90 "
+            className="w-full max-w-md object-cover rounded-xl shadow-lg brightness-75 "
             initial={{ opacity: 0, x: 50 }}
             animate={{ 
               opacity: 1, 
