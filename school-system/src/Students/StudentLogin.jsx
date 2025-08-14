@@ -67,7 +67,7 @@ const StudentLogin = () => {
 
       <motion.div className='p-6'>
 
-       <motion.h1   className="text-gray-600 text-center md:text-left mt-5 font-bold text-4xl mb-4 font-serif"  variants={itemVariants}
+       <motion.h1   className="text-gray-600 text-start md:text-left mt-5 font-bold text-4xl mb-4 font-serif "  variants={itemVariants}
        >Welcome to <span className='text-blue-500' 
        animate={{ 
          color: ["#3b82f6", "#1d4ed8", "#3b82f6"],
@@ -80,24 +80,24 @@ const StudentLogin = () => {
 
 
        <motion.p 
-       className='md:text-start font-serif text-center'
+       className='md:text-start font-serif text-start'
        initial={{ opacity: 0 }}
        animate={{ opacity: 1 }}
        transition={{ delay: 0.4 }}
        variants={itemVariants}>Your learning starts here.</motion.p>
 
        <motion.h1
-        className='md:text-start font-serif text-center text-xl mt-5 font-medium' 
+        className='md:text-start font-serif text-start text-xl mt-5 font-sm text-gray-600' 
         // initial={{ opacity: 0 }}
         // animate={{ opacity: 1 }}
         // transition={{ delay: 0.4 }}
         variants={itemVariants}
         >Log in to access your classes, assignments, and school updates.</motion.h1>
 
-        <motion.p
+        {/* <motion.p
         className='md:text-start font-serif text-center'
         variants={itemVariants}>
-          It's quick and easy  just enter your details below.</motion.p>
+          It's quick and easy  just enter your details below.</motion.p> */}
 
       </motion.div>
 
@@ -206,9 +206,9 @@ const StudentLogin = () => {
                         LOGIN
                       </motion.button>
 
-                      <motion.p className=' mt-10'
+                      <motion.p className=' mt-10 text-gray-700 text-sm'
                          variants={itemVariants}>
-                        Need Help?  <span className='text-blue-600 font-sans text-base'>Contact school for support!</span>
+                        Need Help?  <span className='text-gray-600 font-sans text-base'>Contact school for support!</span>
                       </motion.p>
                     </motion.div>
                   </motion.form>

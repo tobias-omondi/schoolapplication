@@ -66,7 +66,7 @@ const TeachersLogin = () => {
           variants={containerVariants}
         >
           <motion.h1 
-            className="text-gray-600 text-center md:text-left mt-5 font-bold text-4xl mb-4 font-serif"
+            className="text-gray-600 text-start md:text-left mt-5 font-bold text-4xl mb-4 font-serif"
             variants={itemVariants}
           >
             Teachers <motion.span 
@@ -85,11 +85,11 @@ const TeachersLogin = () => {
           </motion.h1>
 
           <motion.div 
-            className="text-center md:text-left py-1 text-gray-600 mb-8 leading-relaxed"
+            className="text-start md:text-left py-1 text-gray-600 mb-8 leading-relaxed"
             variants={itemVariants}
           >
             <motion.p 
-              className='md:text-start font-serif text-center'
+              className='md:text-start font-serif text-center text-gray-600'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
