@@ -62,11 +62,11 @@ const TeachersLogin = () => {
       >
         {/* Left Column - Login Form */}
         <motion.div 
-          className="w-full md:w-1/2 flex flex-col items-center md:items-start px-4 md:px-8"
+          className="w-full md:w-1/2 flex flex-col md:items-start px-4 md:px-8"
           variants={containerVariants}
         >
           <motion.h1 
-            className="text-gray-600 text-start md:text-left mt-5 font-bold text-4xl mb-4 font-serif"
+            className="text-gray-600 text-start mt-5 font-bold text-4xl mb-4 font-serif"
             variants={itemVariants}
           >
             Teachers <motion.span 
@@ -89,7 +89,7 @@ const TeachersLogin = () => {
             variants={itemVariants}
           >
             <motion.p 
-              className='md:text-start font-serif text-center text-gray-600'
+              className='md:text-start font-serif text-start text-gray-600'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
