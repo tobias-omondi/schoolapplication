@@ -80,7 +80,7 @@ const TeachersLogin = () => {
                 ease: "easeInOut"
               }}
             >
-              Panel
+              Login
             </motion.span>
           </motion.h1>
 
