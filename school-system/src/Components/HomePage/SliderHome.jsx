@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 // Import images
-import schoolgraphicimageone from '/src/assets/SCHOOL GRAPHIC.avif';
-import schoolgraphicimagetwo from '/src/assets/JUST DESIGN.avif';
-import schoolgraphicimagethree from '/src/assets/school art.avif';
+import schoolgraphicimageone from '/src/assets/a child drawing.jpg';
+import schoolgraphicimagetwo from '/src/assets/creativedesign.jpg';
+import schoolgraphicimagethree from '/src/assets/books.jpg';
 
 const newsData = [
   {
@@ -144,7 +144,7 @@ const SliderHome = () => {
           <FiChevronRight className="w-6 h-6 text-gray-800" />
         </button> */}
 
-        
+
 
         {/* Dots Indicator */}
         <div className="flex justify-center mt-6 space-x-2">
