@@ -1,5 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
+import { NavLink } from 'react-router-dom';
 
 
 const navLinks = [
@@ -18,7 +19,9 @@ const Navbar = () => {
     <div>
       <nav>
         <motion.div>
-
+          {navLinks.map((link) =>(
+            <NavLink key={link.id} to={link.path}>{link.name}</NavLink>
+          ))}
         </motion.div>
       </nav>
     </div>
