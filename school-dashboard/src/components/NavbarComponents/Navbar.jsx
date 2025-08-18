@@ -3,6 +3,7 @@ import {motion} from 'framer-motion'
 import { NavLink } from 'react-router-dom';
 import { IoIosLogOut } from "react-icons/io";
 import { IoMdPerson } from "react-icons/io";
+import { MdOutlineDarkMode } from "react-icons/md";
 
 
 
@@ -13,8 +14,9 @@ const navLinks = [
   { id: 4, name: 'students', path: '/students' },
   { id: 5, name: 'Blog', path: '/blog' },
   { id: 6, name: 'News', path: '/news' },
-  { id: 8, name: <IoIosLogOut />, path: '/logout/admin' },
-  { id: 8, name: <IoMdPerson />, path: '/user/admin' },
+  { id: 7, name: <IoMdPerson />, path: '/user/admin' },
+  { id: 8, name: <MdOutlineDarkMode/>},
+  { id: 9, name: <IoIosLogOut />, path: '/logout/admin' },
 ];
 
 const navAnimation = {
@@ -41,7 +43,7 @@ const linkAnimation = {
 const Navbar = () => {
   return (
     <motion.div
-    className='sticky bg-white/20 py-8 px-3 mt-5 rounded shadow-2xl backdrop-blur-lg border border-blue-500/50 max-w-fit items-center mx-auto'>
+    className='sticky bg-white/20 py-10 px-3 mt-5 rounded shadow-2xl backdrop-blur-lg border border-blue-500/50 max-w-fit items-center mx-auto'>
 
       <nav>
         <motion.div  className='flex justify-center w-2/3 shadow-2xl text-white/55  text-center mx-auto space-x-14'
