@@ -15,8 +15,7 @@ const navLinks = [
   { id: 5, name: 'Blog', path: '/blog' },
   { id: 6, name: 'News', path: '/news' },
   { id: 7, name: <IoMdPerson />, path: '/user/admin' },
-  { id: 8, name: <MdOutlineDarkMode/>},
-  { id: 9, name: <IoIosLogOut />, path: '/logout/admin' },
+  { id: 8, name: <IoIosLogOut />, path: '/logout/admin' },
 ];
 
 const navAnimation = {
@@ -43,10 +42,12 @@ const linkAnimation = {
 const Navbar = () => {
   return (
     <motion.div
-    className='sticky bg-white/20 py-10 px-3 mt-5 rounded shadow-2xl backdrop-blur-lg border border-blue-500/50 max-w-fit items-center mx-auto'>
+    className='sticky bg-white py-10 px-3 mt-5 rounded shadow hover:shadow-xl hover:shadow-blue-200 backdrop-blur-lg border border-blue-500/50 max-w-fit items-center mx-auto'
+    whileHover={{ scale: 1.02 }} //zooms in
+    transition={{ type: "spring", stiffness: 300 }}>
 
       <nav>
-        <motion.div  className='flex justify-center w-2/3 shadow-2xl text-white/55  text-center mx-auto space-x-14'
+        <motion.div  className='flex justify-center w-2/3 shadow-2xl text-black/55  text-center mx-auto space-x-14'
         initial="hidden"
         animate="visible"
         variants={navAnimation} 
@@ -54,7 +55,7 @@ const Navbar = () => {
           {navLinks.map((link) =>(
             <motion.div  key={link.id}  variants={linkAnimation} className='flex flex-col space-y-2'>
             <NavLink to={link.path} 
-            className="hover:text-white hover:delay-75 transition-colors duration-200">{link.name}</NavLink>
+            className="hover:text-blue-600 hover:delay-75 transition-colors duration-200">{link.name}</NavLink>
             </motion.div>
           ))}
         </motion.div>
