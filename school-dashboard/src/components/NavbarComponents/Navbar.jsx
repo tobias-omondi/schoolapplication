@@ -39,8 +39,8 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className="sticky top-5 py-6 px-4 m-5 rounded-2xl shadow-lg backdrop-blur-md border max-w-5xl mx-auto z-30 bg-gradient-to-r from-blue-50/70 to-white/70 border-blue-200"
-      whileHover={{ scale: 1.01 }}
+      className="sticky top-5 py-3 px-4 m-5 rounded-2xl shadow-lg backdrop-blur-md border max-w-5xl mx-auto z-30 bg-gradient-to-r from-blue-50/70 to-white/70 border-blue-200"
+      whileHover={{ scale: 1.03 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
       <nav>
