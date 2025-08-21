@@ -1,67 +1,80 @@
-import React from 'react'
-import {motion} from 'framer-motion'
+// Navbar.jsx
+import React from 'react';
+import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import { IoIosLogOut } from "react-icons/io";
-import { IoMdPerson } from "react-icons/io";
-import { MdOutlineDarkMode } from "react-icons/md";
-
-
-
-const navLinks = [
-  { id: 1, name: 'Overview', path: '/' },
-  { id: 2, name: 'Admin', path: '/admin/users' },
-  { id: 3, name: 'Teachers', path: '/teachers' },
-  { id: 4, name: 'students', path: '/students' },
-  { id: 5, name: 'Blog', path: '/blog' },
-  { id: 6, name: 'News', path: '/news' },
-  { id: 7, name: <IoMdPerson />, path: '/user/admin' },
-  { id: 8, name: <IoIosLogOut />, path: '/logout/admin' },
-];
-
-const navAnimation = {
-  hidden: {opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren : 0.2, delayChildren: 0.1 
-    }
-  }
-}
-
-const linkAnimation = {
-  hidden: { y:20, opacity: 0},
-  visible: {
-    y:0,
-    opacity: 1,
-    transition: {
-      type : 'spring', stiffness: 100, damping: 10
-    }
-  }
-}
+import { IoIosLogOut, IoMdPerson,  IoMdHome, IoMdSettings, IoMdPeople, IoMdSchool, IoMdCreate, IoMdPaper} from "react-icons/io";
 
 const Navbar = () => {
+  
+  const navLinks = [
+    { id: 1, name: 'Overview', path: '/', icon: <IoMdHome size={20} /> },
+    { id: 2, name: 'Admin', path: '/admin/users', icon: <IoMdSettings size={20} /> },
+    { id: 3, name: 'Teachers', path: '/teachers', icon: <IoMdPeople size={20} /> },
+    { id: 4, name: 'Students', path: '/students', icon: <IoMdSchool size={20} /> },
+    { id: 5, name: 'Blog', path: '/blog', icon: <IoMdCreate size={20} /> },
+    { id: 6, name: 'News', path: '/news', icon: <IoMdPaper size={20} /> },
+    { id: 7, name: 'Profile', path: '/user/admin', icon: <IoMdPerson size={20} /> },
+    { id: 8, name: 'Logout', path: '/logout/admin', icon: <IoIosLogOut size={20} /> },
+  ];
+
+  const navAnimation = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const linkAnimation = {
+    hidden: { y: 15, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: 'spring', stiffness: 120, damping: 12 },
+    },
+  };
+
   return (
     <motion.div
-    className='sticky bg-white py-10 px-3 mt-5 rounded shadow hover:shadow-xl hover:shadow-blue-200 backdrop-blur-lg border border-blue-500/50 max-w-fit items-center mx-auto'
-    whileHover={{ scale: 1.02 }} //zooms in
-    transition={{ type: "spring", stiffness: 300 }}>
-
+      className="sticky top-5 py-6 px-4 m-5 rounded-2xl shadow-lg backdrop-blur-md border max-w-5xl mx-auto z-30 bg-gradient-to-r from-blue-50/70 to-white/70 border-blue-200"
+      whileHover={{ scale: 1.01 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
       <nav>
-        <motion.div  className='flex justify-center w-2/3 shadow-2xl text-black/55  text-center mx-auto space-x-14'
-        initial="hidden"
-        animate="visible"
-        variants={navAnimation} 
+        <motion.div
+          className="flex justify-center space-x-6"
+          initial="hidden"
+          animate="visible"
+          variants={navAnimation}
         >
-          {navLinks.map((link) =>(
-            <motion.div  key={link.id}  variants={linkAnimation} className='flex flex-col space-y-2'>
-            <NavLink to={link.path} 
-            className="hover:text-blue-600 hover:delay-75 transition-colors duration-200">{link.name}</NavLink>
+          {navLinks.map((link) => (
+            <motion.div
+              key={link.id}
+              variants={linkAnimation}
+              className="group flex flex-col items-center"
+            >
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  `flex flex-col items-center justify-center p-3 rounded-2xl font-medium transition-all duration-300 ${
+                    isActive
+                      ? "bg-blue-500 text-white shadow-md"
+                      : "text-gray-700 hover:bg-blue-100 hover:text-blue-600"
+                  }`
+                }
+              >
+                {link.icon}
+                <span className="text-xs mt-1">{link.name}</span>
+              </NavLink>
             </motion.div>
           ))}
         </motion.div>
       </nav>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
