@@ -11,7 +11,7 @@ const Navbar = () => {
     { id: 2, name: 'Admin', path: '/admin/users', icon: <IoMdSettings size={20} /> },
     { id: 3, name: 'Teachers', path: '/teachers', icon: <IoMdPeople size={20} /> },
     { id: 4, name: 'Students', path: '/students', icon: <IoMdSchool size={20} /> },
-    { id: 5, name: 'Blog', path: '/blog', icon: <IoMdCreate size={20} /> },
+    { id: 5, name: 'Blog', path: '/admin/blogs', icon: <IoMdCreate size={20} /> },
     { id: 6, name: 'News', path: '/news', icon: <IoMdPaper size={20} /> },
     { id: 7, name: 'Profile', path: '/user/admin', icon: <IoMdPerson size={20} /> },
     { id: 8, name: 'Logout', path: '/logout/admin', icon: <IoIosLogOut size={20} /> },

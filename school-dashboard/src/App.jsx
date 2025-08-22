@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/NavbarComponents/Navbar';
 import Overview from './components/OverviewComponents/Overview';
+import BlogPage from './components/BlogFeautures/BlogPage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path= '/' element = {<Overview/>} />
+          <Route path= '/admin/blogs' element = {<BlogPage />} />
         </Routes>
       </Router>
     </div>
