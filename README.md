@@ -13,3 +13,38 @@ CHART.JS
 PYTHON django (drf)
 sql
 postgress
+
+# Frontend to get start
+    clone 1st
+    cd Project folder
+    cd file folders
+    npm install
+    nvm use 22
+    npm run dev
+
+# backend
+    clone the repo
+    cd backend
+## Enviroment
+    python3 -m venv myenv
+
+## On Linux/macOS
+    source myenv/bin/activate
+
+## on windows
+    myenv\Scripts\activate
+
+## intall Django package
+    python -m pip install Django
+    pip freeze > requirements.txt
+    pip install -r requirements.txt
+## creating migration
+    python manage.py makemigrations
+    python manage.py makemigrations myapp
+## applying migration
+    python manage.py migrate
+    python manage.py migrate myapp
+## run development server
+    python manage.py runserver
+     
+    
