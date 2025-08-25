@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-+^p1hc*66*h6e+maxs+=&rz1ggbrf(_km4@km4v%&vl$_2hih8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+   'localhost',
+    '127.0.0.1',
+    'https://schoolapplication-6pbw.onrender.com/',
+]
 CORS_ALLOW_ALL_ORIGINS = True 
 
 
