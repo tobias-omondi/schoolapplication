@@ -4,7 +4,7 @@ import { IoIosCreate, IoIosSend, IoIosImages, IoIosLink } from "react-icons/io";
 import { RiDraftLine, RiDeleteBinLine } from "react-icons/ri";
 
 const BlogApiFetch = () => {
-  const API_URL = 'https://schoolapplication-btwi.onrender.com/api/blogs';
+  const API_URL = 'https://schoolapplication-btwi.onrender.com/api/blogs/';
 
   const [blogData, setBlogData] = useState({
     title: '',
