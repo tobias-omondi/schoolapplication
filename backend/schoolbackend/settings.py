@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-+^p1hc*66*h6e+maxs+=&rz1ggbrf(_km4@km4v%&vl$_2hih8
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CORS_ALLOW_ALL_ORIGINS = True 
 
 
 # Application definition
@@ -41,7 +42,10 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'rest_framework_simplejwt',
+    "corsheaders",
 ]
+
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -58,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware", 
 ]
 
 ROOT_URLCONF = 'schoolbackend.urls'
