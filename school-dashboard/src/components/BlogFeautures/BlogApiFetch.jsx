@@ -9,7 +9,7 @@ const BlogApiFetch = () => {
   const [blogData, setBlogData] = useState({
     title: '',
     content: '',
-    category: 'Technology',
+    category: 'Academics',
     imageUrl: '',
     tags: '',
     isPublished: false
@@ -91,7 +91,7 @@ const BlogApiFetch = () => {
       setBlogData({
         title: '',
         content: '',
-        category: 'Technology',
+        category: 'Academics',
         imageUrl: '',
         tags: '',
         isPublished: false
@@ -117,7 +117,7 @@ const BlogApiFetch = () => {
     setBlogData({
       title: blog.title || '',
       content: blog.content || '',
-      category: blog.category || 'Technology',
+      category: blog.category || 'Academics',
       imageUrl: blog.imageUrl || '',
       tags: blog.tags ? blog.tags.join(', ') : '',
       isPublished: blog.isPublished || false
@@ -147,7 +147,7 @@ const BlogApiFetch = () => {
         setBlogData({
           title: '',
           content: '',
-          category: 'Technology',
+          category: 'Academics',
           imageUrl: '',
           tags: '',
           isPublished: false
@@ -171,7 +171,7 @@ const BlogApiFetch = () => {
     setBlogData({
       title: '',
       content: '',
-      category: 'Technology',
+      category: 'Academics',
       imageUrl: '',
       tags: '',
       isPublished: false
@@ -190,7 +190,7 @@ const BlogApiFetch = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-gray-800 mb-2 text-center"
+          className="text-3xl font-medium text-gray-700 mb-2 text-center"
         >
           {editingId ? 'Edit Blog Post' : 'Create New Blog Post'}
         </motion.h2>
@@ -212,8 +212,8 @@ const BlogApiFetch = () => {
             transition={{ delay: 0.3 }}
             className="w-full lg:w-2/3"
           >
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="p-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+            <div className="bg-white rounded shadow-lg overflow-hidden">
+              <div className="p-1 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
               
               <form onSubmit={handleSubmit} className="p-6">
                 {message.text && (
@@ -244,7 +244,7 @@ const BlogApiFetch = () => {
                     value={blogData.title}
                     onChange={handleInputChange}
                     placeholder="Catchy blog title here..."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none focus:border-transparent transition "
                     required
                   />
                 </div>
@@ -261,7 +261,7 @@ const BlogApiFetch = () => {
                     onChange={handleInputChange}
                     rows="10"
                     placeholder="Write your engaging content here..."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-transparent transition"
                     required
                   />
                 </div>
@@ -276,13 +276,14 @@ const BlogApiFetch = () => {
                       name="category"
                       value={blogData.category}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:outline-none text-gray-700 focus:ring-blue-500 focus:border-transparent"
                     >
-                      <option value="Technology">Technology</option>
                       <option value="Lifestyle">Lifestyle</option>
-                      <option value="Travel">Travel</option>
-                      <option value="Food">Food</option>
-                      <option value="Health">Health</option>
+                      <option value="Events & Activities">Events & Activities</option>
+                      <option value="Faith & Values">Faith & Values</option>
+                      <option value="Technology & Innovation">Technology & Innovation</option>
+                      <option value="Arts & Creativity">Arts & Creativity</option>
+                      <option value="Community & Culture">Community & Culture</option>
                     </select>
                   </div>
 
@@ -297,7 +298,7 @@ const BlogApiFetch = () => {
                       value={blogData.tags}
                       onChange={handleInputChange}
                       placeholder="tech, web, design"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -311,7 +312,8 @@ const BlogApiFetch = () => {
                       <IoIosLink />
                     </span>
                     <input
-                      type="url"
+                      type="file"
+                      accept='images/'
                       id="imageUrl"
                       name="imageUrl"
                       value={blogData.imageUrl}
@@ -328,7 +330,7 @@ const BlogApiFetch = () => {
                     whileTap={{ scale: 0.95 }}
                     type="submit"
                     disabled={isLoading}
-                    className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg shadow-md font-medium disabled:opacity-50"
+                    className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg shadow-md font-medium disabled:opacity-50 cursor-pointer"
                   >
                     {isLoading ? (
                       <>
@@ -351,7 +353,7 @@ const BlogApiFetch = () => {
                     whileTap={{ scale: 0.95 }}
                     type="button"
                     onClick={handleSaveDraft}
-                    className="flex items-center px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium"
+                    className="flex items-center px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium cursor-pointer"
                   >
                     <RiDraftLine className="mr-2" />
                     Save Draft
