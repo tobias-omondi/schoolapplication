@@ -4,9 +4,9 @@ import './App.css'
 import Navbar from './components/NavbarComponents/Navbar';
 import Overview from './components/OverviewComponents/Overview';
 import BlogPage from './components/BlogFeautures/BlogPage';
+import NewsPage from './components/NewsFeautures/NewsPage';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route path= '/' element = {<Overview/>} />
           <Route path= '/admin/blogs' element = {<BlogPage />} />
+          <Route path= '/admin/news' element = {<NewsPage />} />
         </Routes>
       </Router>
     </div>
