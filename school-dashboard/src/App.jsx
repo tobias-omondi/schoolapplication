@@ -5,6 +5,7 @@ import Navbar from './components/NavbarComponents/Navbar';
 import Overview from './components/OverviewComponents/Overview';
 import BlogPage from './components/BlogFeautures/BlogPage';
 import NewsPage from './components/NewsFeautures/NewsPage';
+import AdminLogin from './components/AdminComponents/AdminLogin';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path= '/' element = {<Overview/>} />
+          <Route path= '/' element = {<AdminLogin/>} />
           <Route path= '/admin/blogs' element = {<BlogPage />} />
           <Route path= '/admin/news' element = {<NewsPage />} />
         </Routes>
