@@ -1,8 +1,8 @@
 import React from 'react'
-
 import { motion } from 'motion/react'
 import schoolbook from "/src/assets/girl-7629838.avif"
-import Footer from '../Components/Footer/Footer'
+import Footer from '../Footer/Footer'
+
 
 const StudentLogin = () => {
 

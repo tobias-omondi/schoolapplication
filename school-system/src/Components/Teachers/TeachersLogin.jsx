@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import teacherimge from '/src/assets/teacher.avif'
-import Footer from '../Components/Footer/Footer'
+import Footer from '../Footer/Footer'
 
 const TeachersLogin = () => {
   // Animation variants
