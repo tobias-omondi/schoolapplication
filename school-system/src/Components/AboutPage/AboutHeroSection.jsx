@@ -26,7 +26,8 @@ const AboutHeroSection = () => {
           <motion.h1
             initial={{ scale: 0.4, filter: 'blur(2px)' }}
             whileInView={{ scale: 1.0, filter: 'blur(0px)' }}
-            transition={{ duration: 2.0 }}
+            transition={{ duration: 1.4, ease: "easeOut"  }}
+            viewport={{ once: true }}
             className='text-blue-500 text-3xl font-bold text-center md:text-left mb-6'
           >
             A Word From Our Director
@@ -35,7 +36,8 @@ const AboutHeroSection = () => {
           <motion.p
             initial={{ y: -20, scale: 0.5, filter: 'blur(2px)' }}
             whileInView={{ y: 0, scale: 1.0, filter: 'blur(0px)' }}
-            transition={{ duration: 2.5 }}
+            transition={{ duration: 1.4, ease: "easeOut"  }}
+            viewport={{ once: true }}
             className='text-center md:text-left text-lg leading-relaxed font-light'
           >
             At BrightOak Academy, we believe education is not just about academics but about
