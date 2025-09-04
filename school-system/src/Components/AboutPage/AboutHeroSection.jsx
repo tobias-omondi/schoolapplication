@@ -26,7 +26,7 @@ const AboutHeroSection = () => {
           <motion.h1
             initial={{ scale: 0.4, filter: 'blur(2px)' }}
             whileInView={{ scale: 1.0, filter: 'blur(0px)' }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 2.0 }}
             className='text-blue-500 text-3xl font-bold text-center md:text-left mb-6'
           >
             A Word From Our Director
