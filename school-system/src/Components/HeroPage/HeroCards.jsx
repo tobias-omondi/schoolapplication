@@ -32,7 +32,7 @@ const HeroCards = () => {
               <span className="card-number">{card.number}  <span className='card-title'>{card.title}</span></span>
               <motion.p 
               initial = {{opacity: 0, scale: 0.5}}
-              whileInView = {{opacity: 1, scale: 1.0 }}
+              whileInView = {{opacity: 1, scale: 1.2 }}
               duration = {{easeIn, transition: 2}} 
               className="card-description">{card.description} </motion.p>
               <motion.h4

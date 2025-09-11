@@ -5,6 +5,7 @@ import Hero from './Components/HeroPage/Hero';
 import TeachersLogin from './Components/Teachers/TeachersLogin';
 import StudentLogin from './Components/Students/StudentLogin';
 import AboutHome from './Components/AboutPage/AboutHome';
+import ContactPage from './Components/Contact/ContactPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/about' element = {<AboutHome/>} />
         <Route path='/teachers/panel/login' element = {<TeachersLogin/>} />
         <Route path='/student/portfolio/login' element = {<StudentLogin />} />
+        <Route path='/contact' element = {<ContactPage/>}/>
       </Routes>
     </Router>
   );
