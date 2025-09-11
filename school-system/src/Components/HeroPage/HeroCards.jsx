@@ -6,9 +6,10 @@ import AboutPart from './AboutHeroPage/AboutPart';
 // import aboutpart image
  import aboutpartimage from '/src/assets/unnamed.jpg'
 
-import { motion} from "motion/react"
+import { easeIn, motion} from "framer-motion"
 import { FaBookReader, FaCheck } from 'react-icons/fa';
 import { FaBasketball } from 'react-icons/fa6';
+import { transition } from 'three/examples/jsm/tsl/display/TransitionNode.js';
 
 const heroCards = [
   { id: 1, number: "I", title: "Active Learning", description: 'We promote hands-on education and real-world experience.', icon : <FaBookReader /> },
@@ -29,8 +30,16 @@ const HeroCards = () => {
           {heroCards.map(card => (
             <li key={card.id} className="hero-card">
               <span className="card-number">{card.number}  <span className='card-title'>{card.title}</span></span>
-              <p className="card-description">{card.description} </p>
-              <h4><span className='text-3xl text-blue-500'>{card.icon}</span></h4>
+              <motion.p 
+              initial = {{opacity: 0, scale: 0.5}}
+              whileInView = {{opacity: 1, scale: 1.0 }}
+              duration = {{easeIn, transition: 2}} 
+              className="card-description">{card.description} </motion.p>
+              <motion.h4
+                initial = {{opacity: 0, scale: 0.5}}
+                whileInView = {{opacity: 1, scale: 1.0 }}
+                duration = {{easeIn, transition: 2}} >
+                  <span className='text-3xl text-blue-500'>{card.icon}</span></motion.h4>
             </li>
           ))}
         </ul>

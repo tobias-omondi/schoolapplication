@@ -107,12 +107,12 @@ const Hero = () => {
     <>
       {/* Custom Cursor */}
       <div 
-        ref={cursorRef}
-        className={`fixed top-0 left-0 h-8 w-8 rounded-full pointer-events-none z-50 transition-transform duration-100 ease-out ${
-          cursorVariant === "text" ? "bg-white h-20 w-20 mix-blend-difference" :
-          cursorVariant === "button" ? "bg-yellow-500 h-12 w-12" :
-          "bg-white bg-opacity-70 mix-blend-difference"
-        }`}
+        // ref={cursorRef}
+        // className={`fixed top-0 left-0 h-8 w-8 rounded-full pointer-events-none z-50 transition-transform duration-100 ease-out ${
+        //   cursorVariant === "text" ? "bg-white h-20 w-20 mix-blend-difference" :
+        //   cursorVariant === "button" ? "bg-yellow-500 h-12 w-12" :
+        //   "bg-white bg-opacity-70 mix-blend-difference"
+        // }`}
       />
 
       {/* Hero Slider */}
@@ -158,7 +158,7 @@ const Hero = () => {
                           {item.desc}
                         </p>
                         <motion.button
-                          className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-full flex items-center cursor-pointer"
+                          className="bg-transparent border hover:border-none hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded flex items-center cursor-pointer hover:shadow"
                           onMouseEnter={buttonEnter}
                           onMouseLeave={buttonLeave}
                           whileHover={{ scale: 1.05 }}
@@ -178,14 +178,14 @@ const Hero = () => {
         {/* Navigation Arrows */}
         <button 
           onClick={prevSlide}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-30 bg-opacity-30 hover:bg-opacity-50 rounded-full p-2 transition-all duration-300"
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-30 bg-opacity-30 hover:bg-opacity-50 rounded-full p-2 transition-all duration-300 md:hidden sm:hidden"
           aria-label="Previous slide"
         >
           <IoIosArrowRoundBack className="text-white text-4xl" />
         </button>
         <button 
           onClick={nextSlide}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-30  bg-opacity-30 hover:bg-opacity-50 rounded-full p-2 transition-all duration-300"
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-30  bg-opacity-30 hover:bg-opacity-50 rounded-full p-2 transition-all duration-300 md:hidden sm:hidden"
           aria-label="Next slide"
         >
           <IoIosArrowRoundForward className="text-white text-4xl font-bold" />

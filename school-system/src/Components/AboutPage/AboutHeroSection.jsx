@@ -149,8 +149,6 @@ const AboutHeroSection = () => {
         <li>
           <ul> <span className='font-medium'>Growth Mindset:</span> <br/>encouraging students to embrace challenges, learn from setbacks, and celebrate progress.</ul>
         </li> <br/>
-
-        <p   className="text-center md:text-left text-lg font-light leading-relaxed font-light font-['Fredoka']" >Every milestone we achieve is a reflection of the dedication of our teachers, the determination of our students, and the support of our community. As we look to the future, we remain committed to preparing our learners to thrive in an ever-changing world.</p>
       </motion.div>
 
       <img src={playingbasketball} alt='students with books' className='object-cover'/>

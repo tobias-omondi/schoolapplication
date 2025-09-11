@@ -11,11 +11,11 @@ const AboutPart = ({title, description , image}) => {
     <div className='aboutPart-container'>
 
       <motion.div
-       initial={{ opacity: 0, y: 50, filter: 'blur(3px)' }}
-       whileInView={{ opacity: 1, y: 0,  filter: 'blur(0)' }}
+       initial={{ opacity: 0, scale: 0, filter: 'blur(3px)' }}
+       whileInView={{ opacity: 1, scale: 1.0,  filter: 'blur(0)' }}
        transition={{ duration: 1, ease: "easeOut" }} className='aboutpart-headings'>
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <h1 className='text-blue-500 underline'>{title}</h1>
+        <p className="font-['Fredoka']">{description}</p>
       </motion.div>
 
       <motion.div
