@@ -15,7 +15,7 @@ const navLinks = [
   { id: 4, name: 'Blog', path: '/blog' },
   { id: 5, name: 'Portfolio', path: '/portfolio' },
   { id: 6, name: 'Contact', path: '/contact' },
-  { id: 7, name: <IoIosLogIn />, path: '/login' },
+  // { id: 7, name: <IoIosLogIn />, path: '/login' },
 ];
 
 const portfolioDropdownLinks = [
