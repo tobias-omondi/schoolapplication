@@ -131,8 +131,8 @@ const AboutHeroSection = () => {
           >At BrightOak Academy, our Junior High School program provides a strong academic foundation while nurturing character, creativity, and confidence. We prepare students for the future by combining quality teaching with life skills, leadership opportunities, and co-curricular activities that inspire growth both inside and outside the classroom.</motion.p>
       </motion.div>
 
-      <motion.div className='flex flex-row'>
-      <motion.div className= "mt-16 px-6 md:px-16 p-5"
+      <motion.div  className='mt-20 flex flex-col md:flex-col lg:flex-row items-center lg:items-start gap-10 px-6 md:px-16'>
+      <motion.div className= "mt-2 px-6 md:px-16 p-5"
          initial={{ y: -20, scale: 0.5, filter: 'blur(2px)' }}
          whileInView={{ y: 0, scale: 1.0, filter: 'blur(0px)' }}
          transition={{ duration: 1.4, ease: "easeOut"  }}
