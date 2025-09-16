@@ -83,8 +83,11 @@ const Navbar = () => {
           </motion.div>
 
           {/* Desktop Links */}
+
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => {
+
+
               // === PORTFOLIO DROPDOWN ===
               if (link.id === 5) {
                 return (
@@ -131,7 +134,8 @@ const Navbar = () => {
                 );
               }
 
-              // === ABOUT DROPDOWN ===
+
+              //  ABOUT DROPDOWN 
               if (link.id === 2) {
                 return (
                   <div
@@ -176,7 +180,9 @@ const Navbar = () => {
                 );
               }
 
-              // === EDUCATION DROPDOWN ===
+              //  EDUCATION DROPDOWN
+
+
               if (link.id === 3) {
                 return (
                   <div
@@ -221,7 +227,7 @@ const Navbar = () => {
                 );
               }
 
-              // === DEFAULT LINK ===
+              //  DEFAULT LINK 
               return (
                 <div key={link.id} className="relative group">
                   <Link
@@ -273,7 +279,8 @@ const Navbar = () => {
                 className="px-6 py-3 space-y-2"
               >
                 {navLinks.map((link) => {
-                  // === MOBILE PORTFOLIO ===
+
+                  // MOBILE PORTFOLIO 
                   if (link.id === 5) {
                     return (
                       <div key={link.id}>
@@ -312,7 +319,7 @@ const Navbar = () => {
                     );
                   }
 
-                  // === MOBILE ABOUT ===
+                  // MOBILE ABOUT 
                   if (link.id === 2) {
                     return (
                       <div key={link.id}>
@@ -350,7 +357,7 @@ const Navbar = () => {
                     );
                   }
 
-                  // === MOBILE EDUCATION ===
+                  // MOBILE EDUCATION 
                   if (link.id === 3) {
                     return (
                       <div key={link.id}>
@@ -388,7 +395,8 @@ const Navbar = () => {
                     );
                   }
 
-                  // === DEFAULT MOBILE LINK ===
+                  // DEFAULT MOBILE LINK
+                  
                   return (
                     <motion.div
                       key={link.id}
