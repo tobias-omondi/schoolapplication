@@ -1,13 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CiMenuFries } from 'react-icons/ci';
 import { IoClose } from 'react-icons/io5';
 import logo from '/src/assets/schoollogo.webp';
 import { Link, useLocation } from 'react-router-dom';
-import {IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import { FaChalkboardTeacher, FaUserGraduate } from 'react-icons/fa';
+import { HiOutlineMenu } from "react-icons/hi";
 
+// Nav links
 const navLinks = [
   { id: 1, name: 'Our School', path: '/' },
   { id: 2, name: 'About', path: '/about' },
@@ -18,102 +19,82 @@ const navLinks = [
   { id: 7, name: 'Enquire Now', path: '/contact' },
 ];
 
-
-  //  Portfolio droplinks for the school 
+// Dropdown links
 const portfolioDropdownLinks = [
   { id: 1, name: 'Student Portfolio', path: '/student/portfolio/login', icon: <FaUserGraduate className="text-blue-500" /> },
   { id: 2, name: 'Teacher Dashboard', path: '/teachers/panel/login', icon: <FaChalkboardTeacher className="text-blue-500" /> },
 ];
 
-  // aboutDropLinks for the school
 const aboutDropLinks = [
-  {id: 1, name: 'Our Stories', path: '/about/ourstories'},
-  {id: 2, name: 'Alumni', path: '/about/ouralumni'},
-  {id: 3, name: 'Academic Results', path: '/about/academic results'},
+  { id: 1, name: 'About', path: '/about' },
+  { id: 2, name: 'Our Stories', path: '/about/ourstories' },
+  { id: 3, name: 'Alumni', path: '/about/ouralumni' },
+  { id: 4, name: 'Academic Results', path: '/about/academic results' },
+
 ];
 
-
-  // about droplinks for the school
 const educationDropLinks = [
-  {id: 1, name: 'KinderGarten Education', path: '/education/kindergarten'},
-  {id: 2, name: 'Pre-Primary Education', path: '/education/pre-primary'},
-  {id: 3, name: 'Primary Education', path: '/education/Primary'},
-  {id: 4, name: 'Junior Secondary Education', path: '/education/junior secondary'},
-]
+  { id: 1, name: 'Education', path: '/education' },
+  { id: 2, name: 'KinderGarten Education', path: '/education/kindergarten' },
+  { id: 3, name: 'Pre-Primary Education', path: '/education/pre-primary' },
+  { id: 4, name: 'Primary Education', path: '/education/Primary' },
+  { id: 5, name: 'Junior Secondary Education', path: '/education/junior secondary' },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // usestate for portfolio dropdown
+  // Desktop dropdown states
   const [isPortfolioDropdownOpen, setIsPortfolioDropdownOpen] = useState(false);
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  const [isEducationDroplinksOpen, setEducationDroplinksOpen] = useState(false);
+
+  // Mobile dropdown states
   const [isMobilePortfolioDropdownOpen, setIsMobilePortfolioDropdownOpen] = useState(false);
-
-  //  drop down for about page
-  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState (false);
-  const [isMobileAboutDropdownOpen, setIsMobileAboutDropdownOpen] = useState (false);
-
-  //  drop down for Education drop links
-
-  const [isEducationDroplinksOpen, setEducationDroplinksOpen] = useState (false);
-  const [isMobileEducationlinksOpen, setMobileEducationlinksOpen] = useState (false);
+  const [isMobileAboutDropdownOpen, setIsMobileAboutDropdownOpen] = useState(false);
+  const [isMobileEducationlinksOpen, setMobileEducationlinksOpen] = useState(false);
 
   const location = useLocation();
   const toggleMenu = () => setIsOpen(!isOpen);
 
-
-
   return (
     <>
       <nav className="w-full backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-gray-100 lg:p-3">
-
         <div className="max-w-7xl mx-auto px-2 flex justify-between items-center h-20">
-          
           {/* Logo */}
-          <motion.div 
+          <motion.div
             className="flex items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <img 
-              src={logo} 
-              alt="School Logo" 
-              className="md:w-30 w-13 md:h-16 h-10 object-contain rounded-lg bg-transparent" 
+            <img
+              src={logo}
+              alt="School Logo"
+              className="md:w-30 w-13 md:h-16 h-10 object-contain rounded-lg bg-transparent"
             />
-            
             <h1 className="text md:text-xl lg:text-3xl font-bold text-gray-800 tracking-tight ml-2">
               {"Academy".split("").map((char, i) => (
-                <motion.span className='text-gray-600'
-                  // key={i}
-                  // initial={{ y: 0 }}
-                  // animate={{ y: [-5, 5, -5] }}
-                  // transition={{
-                  //   duration: 1.5,
-                  //   repeat: Infinity,
-                  //   ease: "easeInOut",
-                  //   delay: i * 0.1
-                  // }}
-                  // style={{ display: "inline-block" }}
-                >
+                <motion.span key={i} className='text-gray-600'>
                   {char}
                 </motion.span>
               ))}
             </h1>
           </motion.div>
 
-
-
-
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => {
-              if (link.id === 5) { // Portfolio link
+              // === PORTFOLIO DROPDOWN ===
+              if (link.id === 5) {
                 return (
-                  <div 
-                    key={link.id} 
+                  <div
+                    key={link.id}
                     className="relative group"
                     onMouseEnter={() => setIsPortfolioDropdownOpen(true)}
                     onMouseLeave={() => setIsPortfolioDropdownOpen(false)}
+
+                    // onClick={() =>  setIsPortfolioDropdownOpen(!isPortfolioDropdownOpen)}
                   >
                     <div className="flex items-center gap-1 cursor-pointer">
                       <Link
@@ -124,13 +105,10 @@ const Navbar = () => {
                       >
                         {link.name}
                       </Link>
-                      {isPortfolioDropdownOpen ? 
-                        <IoIosArrowUp className="text-gray-500" /> : 
-                        <IoIosArrowDown className="text-gray-500" />}
+                      {isPortfolioDropdownOpen ? <IoIosArrowUp className="text-gray-500" /> : <IoIosArrowDown className="text-gray-500" />}
                     </div>
-                    
                     {isPortfolioDropdownOpen && (
-                      <motion.div 
+                      <motion.div
                         className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -152,6 +130,98 @@ const Navbar = () => {
                   </div>
                 );
               }
+
+              // === ABOUT DROPDOWN ===
+              if (link.id === 2) {
+                return (
+                  <div
+                    key={link.id}
+                    className="relative group"
+                    onMouseEnter={() => setIsAboutDropdownOpen(true)}
+                    onMouseLeave={() => setIsAboutDropdownOpen(false)}
+                    // onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
+
+                  >
+                    <div className="flex items-center gap-1 cursor-pointer">
+                      <Link
+                        to={link.path}
+                        className={`px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 ${
+                          location.pathname === link.path ? 'text-blue-600 font-semibold' : ''
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                      {isAboutDropdownOpen ? <IoIosArrowUp className="text-gray-500" /> : <IoIosArrowDown className="text-gray-500" />}
+                    </div>
+                    {isAboutDropdownOpen && (
+                      <motion.div
+                        className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {aboutDropLinks.map((dropdownLink) => (
+                          <Link
+                            key={dropdownLink.id}
+                            to={dropdownLink.path}
+                            className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          >
+                            {dropdownLink.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </div>
+                );
+              }
+
+              // === EDUCATION DROPDOWN ===
+              if (link.id === 3) {
+                return (
+                  <div
+                    key={link.id}
+                    className="relative group"
+                    onMouseEnter={() => setEducationDroplinksOpen(true)}
+                    onMouseLeave={() => setEducationDroplinksOpen(false)}
+                    // onClick={() => setEducationDroplinksOpen(!isEducationDroplinksOpen)}
+
+                  >
+                    <div className="flex items-center gap-1 cursor-pointer">
+                      <Link
+                        to={link.path}
+                        className={`px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 ${
+                          location.pathname === link.path ? 'text-blue-600 font-semibold' : ''
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                      {isEducationDroplinksOpen ? <IoIosArrowUp className="text-gray-500" /> : <IoIosArrowDown className="text-gray-500" />}
+                    </div>
+                    {isEducationDroplinksOpen && (
+                      <motion.div
+                        className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {educationDropLinks.map((dropdownLink) => (
+                          <Link
+                            key={dropdownLink.id}
+                            to={dropdownLink.path}
+                            className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          >
+                            {dropdownLink.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </div>
+                );
+              }
+
+              // === DEFAULT LINK ===
               return (
                 <div key={link.id} className="relative group">
                   <Link
@@ -176,16 +246,13 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <motion.div 
-            className="lg:hidden z-50"
-            whileTap={{ scale: 0.95 }}
-          >
+          <motion.div className="lg:hidden z-50" whileTap={{ scale: 0.95 }}>
             <button
               onClick={toggleMenu}
               className="p-2 text-2xl text-gray-700 focus:outline-none rounded-md hover:bg-gray-100 transition-colors"
               aria-label="Toggle menu"
             >
-              {isOpen ? <IoClose /> : <CiMenuFries />}
+              {isOpen ? <IoClose /> : <HiOutlineMenu />}
             </button>
           </motion.div>
         </div>
@@ -194,27 +261,29 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="lg:hidden bg-white overflow-hidden shadow-lg"
+              initial={{ height: 0, opacity: 0, scale: 0.5 }}
+              animate={{ height: 'auto', opacity: 1, scale: 1 }}
+              exit={{ height: 0, opacity: 0, scale: 0.5 }}
+              transition={{ duration: 0.9, ease: 'easeInOut' }}
+              className="lg:hidden bg-white border border-blue-500 overflow-hidden shadow-lg"
             >
-              <div className="px-6 py-3 space-y-2">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0, scale: 1.01 }}
+                className="px-6 py-3 space-y-2"
+              >
                 {navLinks.map((link) => {
-                  if (link.id === 5) { // Portfolio link
+                  // === MOBILE PORTFOLIO ===
+                  if (link.id === 5) {
                     return (
                       <div key={link.id}>
-                        <div 
+                        <div
                           className="flex items-center justify-between py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer"
                           onClick={() => setIsMobilePortfolioDropdownOpen(!isMobilePortfolioDropdownOpen)}
                         >
                           <span className="font-medium">{link.name}</span>
-                          {isMobilePortfolioDropdownOpen ? 
-                            <IoIosArrowUp className="text-gray-500" /> : 
-                            <IoIosArrowDown className="text-gray-500" />}
+                          {isMobilePortfolioDropdownOpen ? <IoIosArrowUp className="text-gray-500" /> : <IoIosArrowDown className="text-gray-500" />}
                         </div>
-                        
                         {isMobilePortfolioDropdownOpen && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
@@ -242,6 +311,84 @@ const Navbar = () => {
                       </div>
                     );
                   }
+
+                  // === MOBILE ABOUT ===
+                  if (link.id === 2) {
+                    return (
+                      <div key={link.id}>
+                        <div
+                          className="flex items-center justify-between py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer"
+                          onClick={() => setIsMobileAboutDropdownOpen(!isMobileAboutDropdownOpen)}
+                        >
+                          <span className="font-medium">{link.name}</span>
+                          {isMobileAboutDropdownOpen ? <IoIosArrowUp className="text-gray-500" /> : <IoIosArrowDown className="text-gray-500" />}
+                        </div>
+                        {isMobileAboutDropdownOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="ml-4 space-y-2"
+                          >
+                            {aboutDropLinks.map((dropdownLink) => (
+                              <Link
+                                key={dropdownLink.id}
+                                to={dropdownLink.path}
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setIsMobileAboutDropdownOpen(false);
+                                }}
+                                className="block py-2 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                              >
+                                {dropdownLink.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </div>
+                    );
+                  }
+
+                  // === MOBILE EDUCATION ===
+                  if (link.id === 3) {
+                    return (
+                      <div key={link.id}>
+                        <div
+                          className="flex items-center justify-between py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer"
+                          onClick={() => setMobileEducationlinksOpen(!isMobileEducationlinksOpen)}
+                        >
+                          <span className="font-medium">{link.name}</span>
+                          {isMobileEducationlinksOpen ? <IoIosArrowUp className="text-gray-500" /> : <IoIosArrowDown className="text-gray-500" />}
+                        </div>
+                        {isMobileEducationlinksOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="ml-4 space-y-2"
+                          >
+                            {educationDropLinks.map((dropdownLink) => (
+                              <Link
+                                key={dropdownLink.id}
+                                to={dropdownLink.path}
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setMobileEducationlinksOpen(false);
+                                }}
+                                className="block py-2 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                              >
+                                {dropdownLink.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </div>
+                    );
+                  }
+
+                  // === DEFAULT MOBILE LINK ===
                   return (
                     <motion.div
                       key={link.id}
@@ -253,9 +400,7 @@ const Navbar = () => {
                         to={link.path}
                         onClick={() => setIsOpen(false)}
                         className={`block py-3 px-4 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium ${
-                          location.pathname === link.path
-                            ? 'bg-blue-50 text-blue-600'
-                            : ''
+                          location.pathname === link.path ? 'bg-blue-50 text-blue-600' : ''
                         }`}
                       >
                         {link.name}
@@ -263,7 +408,7 @@ const Navbar = () => {
                     </motion.div>
                   );
                 })}
-              </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
