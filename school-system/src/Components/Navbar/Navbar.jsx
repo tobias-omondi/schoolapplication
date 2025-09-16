@@ -5,33 +5,66 @@ import { CiMenuFries } from 'react-icons/ci';
 import { IoClose } from 'react-icons/io5';
 import logo from '/src/assets/schoollogo.webp';
 import { Link, useLocation } from 'react-router-dom';
-import { IoIosLogIn, IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import {IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import { FaChalkboardTeacher, FaUserGraduate } from 'react-icons/fa';
 
 const navLinks = [
-  { id: 1, name: 'Home', path: '/' },
+  { id: 1, name: 'Our School', path: '/' },
   { id: 2, name: 'About', path: '/about' },
-  { id: 3, name: 'Class Profile', path: '/classprofile' },
+  { id: 3, name: 'Education', path: '/education' },
   { id: 4, name: 'Blog', path: '/blog' },
   { id: 5, name: 'Portfolio', path: '/portfolio' },
-  { id: 6, name: 'Enquire Now', path: '/contact' },
-  // { id: 7, name: <IoIosLogIn />, path: '/login' },
+  { id: 6, name: 'School Life', path: '/school life' },
+  { id: 7, name: 'Enquire Now', path: '/contact' },
 ];
 
+
+  //  Portfolio droplinks for the school 
 const portfolioDropdownLinks = [
   { id: 1, name: 'Student Portfolio', path: '/student/portfolio/login', icon: <FaUserGraduate className="text-blue-500" /> },
   { id: 2, name: 'Teacher Dashboard', path: '/teachers/panel/login', icon: <FaChalkboardTeacher className="text-blue-500" /> },
 ];
 
+  // aboutDropLinks for the school
+const aboutDropLinks = [
+  {id: 1, name: 'Our Stories', path: '/about/ourstories'},
+  {id: 2, name: 'Alumni', path: '/about/ouralumni'},
+  {id: 3, name: 'Academic Results', path: '/about/academic results'},
+];
+
+
+  // about droplinks for the school
+const educationDropLinks = [
+  {id: 1, name: 'KinderGarten Education', path: '/education/kindergarten'},
+  {id: 2, name: 'Pre-Primary Education', path: '/education/pre-primary'},
+  {id: 3, name: 'Primary Education', path: '/education/Primary'},
+  {id: 4, name: 'Junior Secondary Education', path: '/education/junior secondary'},
+]
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // usestate for portfolio dropdown
   const [isPortfolioDropdownOpen, setIsPortfolioDropdownOpen] = useState(false);
   const [isMobilePortfolioDropdownOpen, setIsMobilePortfolioDropdownOpen] = useState(false);
+
+  //  drop down for about page
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState (false);
+  const [isMobileAboutDropdownOpen, setIsMobileAboutDropdownOpen] = useState (false);
+
+  //  drop down for Education drop links
+
+  const [isEducationDroplinksOpen, setEducationDroplinksOpen] = useState (false);
+  const [isMobileEducationlinksOpen, setMobileEducationlinksOpen] = useState (false);
+
   const location = useLocation();
   const toggleMenu = () => setIsOpen(!isOpen);
+
+
+
   return (
     <>
-      <nav className="w-full backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-gray-100 ">
+      <nav className="w-full backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-gray-100 lg:p-3">
 
         <div className="max-w-7xl mx-auto px-2 flex justify-between items-center h-20">
           
@@ -45,22 +78,22 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="School Logo" 
-              className="md:w-30 w-13 md:h-15 h-10 object-contain rounded-lg" 
+              className="md:w-30 w-13 md:h-16 h-10 object-contain rounded-lg bg-transparent" 
             />
             
-            <h1 className="text md:text-xl font-bold text-gray-800 tracking-tight ml-2">
+            <h1 className="text md:text-xl lg:text-3xl font-bold text-gray-800 tracking-tight ml-2">
               {"Academy".split("").map((char, i) => (
-                <motion.span
-                  key={i}
-                  initial={{ y: 0 }}
-                  animate={{ y: [-5, 5, -5] }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: i * 0.1
-                  }}
-                  style={{ display: "inline-block" }}
+                <motion.span className='text-gray-600'
+                  // key={i}
+                  // initial={{ y: 0 }}
+                  // animate={{ y: [-5, 5, -5] }}
+                  // transition={{
+                  //   duration: 1.5,
+                  //   repeat: Infinity,
+                  //   ease: "easeInOut",
+                  //   delay: i * 0.1
+                  // }}
+                  // style={{ display: "inline-block" }}
                 >
                   {char}
                 </motion.span>

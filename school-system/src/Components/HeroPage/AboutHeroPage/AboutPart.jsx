@@ -4,7 +4,7 @@ import React from 'react'
 // import the css
 
 import './AboutPart.css'
-import { motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 const AboutPart = ({title, description , image}) => {
   return (
