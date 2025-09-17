@@ -6,7 +6,7 @@ import AboutPart from './AboutHeroPage/AboutPart';
 // import aboutpart image
  import aboutpartimage from '/src/assets/unnamed.jpg'
 
-import { easeIn, motion} from "framer-motion"
+import { easeIn, easeInOut, motion} from "framer-motion"
 import { FaBookReader, FaCheck } from 'react-icons/fa';
 import { FaBasketball } from 'react-icons/fa6';
 import { transition } from 'three/examples/jsm/tsl/display/TransitionNode.js';
@@ -22,9 +22,10 @@ const HeroCards = () => {
     <>
     <div className="herocards-container">
       <motion.div
-      initial = {{opacity: 0.7}}
+      initial = {{opacity: 0.7, y: 100}}
       whileInView={{ opacity: 1, y: 0, }}
-      transition={{duration: 1, ease: 'easeInOut'}}
+      transition={{duration: 1.04, ease: 'easeInOut'}}
+      viewport={{once: true}}
       className="hero-card-container">
         <ul>
           {heroCards.map(card => (
@@ -32,13 +33,15 @@ const HeroCards = () => {
               <span className="card-number">{card.number}  <span className='card-title'>{card.title}</span></span>
               <motion.p 
               initial = {{opacity: 0, scale: 0.5}}
-              whileInView = {{opacity: 1, scale: 1.2 }}
-              duration = {{easeIn, transition: 2}} 
+              whileInView = {{opacity: 1, scale: 1.0 }}
+              duration = {{ease: "easeInOut", transition: 2}} 
+              viewport={{once: true}}
               className="card-description">{card.description} </motion.p>
               <motion.h4
-                initial = {{opacity: 0, scale: 0.5}}
+                initial = {{opacity: 0, scale: 0.8}}
                 whileInView = {{opacity: 1, scale: 1.0 }}
-                duration = {{easeIn, transition: 2}} >
+                duration = {{ease: easeInOut, transition: 2}}
+                viewport={{once: true}} >
                   <span className='text-3xl text-blue-500'>{card.icon}</span></motion.h4>
             </li>
           ))}
@@ -47,7 +50,10 @@ const HeroCards = () => {
 
       <div className='herolast-fonts'>
       <div className='text-center text-gray-700'>
-        <h2>Learn anywhere anytime</h2>
+        <motion.h2 initial = {{opacity: 0.7, y: 100}}
+      whileInView={{ opacity: 1, y: 0, }}
+      viewport={{once: true}}
+      transition={{duration: 1.04, ease: 'easeInOut'}}>Learn anywhere anytime</motion.h2>
       </div>
       </div>
     </div>

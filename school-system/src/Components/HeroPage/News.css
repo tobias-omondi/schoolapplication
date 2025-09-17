@@ -70,7 +70,7 @@
 }
 .news-btn button{
   display: flex;
-  background-color: #ffb703;
+  background-color: transparent;
   padding: 13px 20px;
   border-radius: 10px;
   font-family: "Nunito", sans-serif;
@@ -78,4 +78,13 @@
   font-weight: 700;
   color: #002B5B;
   cursor: pointer;
+  border: 1.4px solid black;
+  transition: ease-in-out 0.8;
+  transition-delay: 0.8 ;
+}
+.news-btn button:hover{
+  background-color: blue;
+  border: none;
+  scale: 1.03;
+  color: white;
 }

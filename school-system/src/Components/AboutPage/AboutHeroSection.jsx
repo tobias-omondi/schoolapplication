@@ -27,8 +27,8 @@ const AboutHeroSection = () => {
         {/* Text */}
         <motion.div className='flex flex-col lg:w-2/3'>
           <motion.h1
-            initial={{ scale: 0.4, filter: 'blur(2px)' }}
-            whileInView={{ scale: 1.0, filter: 'blur(0px)' }}
+            initial={{ y: 100, filter: 'blur(2px)' }}
+            whileInView={{ y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
             className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6  underline decoration-1 underline-offset-8  font-['Nata sans']" 
@@ -37,8 +37,8 @@ const AboutHeroSection = () => {
           </motion.h1>
 
           <motion.p
-            initial={{ y: -20, scale: 0.5, filter: 'blur(2px)' }}
-            whileInView={{ y: 0, scale: 1.0, filter: 'blur(0px)' }}
+            initial={{ y: 100,  filter: 'blur(1px)' }}
+            whileInView={{ y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
             className="text-center md:text-left text-lg leading-relaxed font-light font-['Fredoka'] "
@@ -85,8 +85,8 @@ const AboutHeroSection = () => {
 
        <motion.div className='flex flex-col lg:w-2/3'>
           <motion.h1
-            initial={{ scale: 0.4, filter: 'blur(2px)' }}
-            whileInView={{ scale: 1.0, filter: 'blur(0px)' }}
+            initial={{ y: 100, filter: 'blur(1px)' }}
+            whileInView={{ y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
             className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6  underline decoration-1 underline-offset-8 font-['Nata sans']" 
@@ -95,8 +95,8 @@ const AboutHeroSection = () => {
           </motion.h1>
 
           <motion.p
-            initial={{ y: -20, scale: 0.5, filter: 'blur(2px)' }}
-            whileInView={{ y: 0, scale: 1.0, filter: 'blur(0px)' }}
+            initial={{ y: 100, filter: 'blur(2px)' }}
+            whileInView={{ y: 0,  filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
             className="text-center md:text-left text-lg font-light leading-relaxed font-light font-['Fredoka']" 
@@ -133,8 +133,8 @@ const AboutHeroSection = () => {
 
       <motion.div  className='mt-20 flex flex-col md:flex-col lg:flex-row items-center lg:items-start gap-10 px-6 md:px-16'>
       <motion.div className= "mt-2 px-6 md:px-16 p-5"
-         initial={{ y: -20, scale: 0.5, filter: 'blur(2px)' }}
-         whileInView={{ y: 0, scale: 1.0, filter: 'blur(0px)' }}
+         initial={{ y: 100,  filter: 'blur(2px)' }}
+         whileInView={{ y: 0, filter: 'blur(0px)' }}
          transition={{ duration: 1.4, ease: "easeOut"  }}
          viewport={{ once: true }}>
         <h1 className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6 underline decoration-1 underline-offset-4 font-['Nata sans']" >Our Path to Success</h1>
