@@ -15,8 +15,8 @@ const navLinks = [
   { id: 3, name: 'Education', path: '/education' },
   { id: 4, name: 'Blog', path: '/blog' },
   { id: 5, name: 'Portfolio', path: '/portfolio' },
-  { id: 6, name: 'School Life', path: '/school life' },
-  { id: 7, name: 'Enquire Now', path: '/contact' },
+  // { id: 6, name: 'School Life', path: '/school life' },
+  { id: 6, name: 'Enquire Now', path: '/contact' },
 ];
 
 // Dropdown links

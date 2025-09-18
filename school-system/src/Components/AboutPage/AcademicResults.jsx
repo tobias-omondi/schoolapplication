@@ -1,5 +1,5 @@
 import React from 'react'
-import board from "/src/assets/almunistudents.jpg"
+import board from "/src/assets/test-4092022_1280.jpg"
 import Footer from '../Footer/Footer'
 import { motion } from 'framer-motion'
 
@@ -16,8 +16,8 @@ const AcademicResults = () => {
 
       {/* title of the page */}
 
-      <div className='absolute z-50 top-6/7 right-4/5 transform translate-x-1/2 translate-y-1/2'>
-      <h1 className='text-white text-3xl font-bold underline underline-offset-4 decoration-blue-500 w-full'>Academic Results</h1></div>
+      <div className='absolute z-50 top-6/7 right-4/5 transform translate-x-2/3 translate-y-1/2'>
+      <h1 className='text-white text-3xl font-medium'>Academic Results</h1></div>
 
       <div className='mt-5'>
         <Footer />
