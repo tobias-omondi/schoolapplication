@@ -9,6 +9,7 @@ import ContactPage from './Components/Contact/ContactPage';
 import OurStories from './Components/AboutPage/OurStories';
 import Almuni from './Components/AboutPage/Almuni';
 import AcademicResults from './Components/AboutPage/AcademicResults';
+import mainDashboard from './Components/Teachers/mainDashboard';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path= '/about/alumni' element = {<Almuni/>} />
         <Route path= '/about/academic-results' element = {<AcademicResults/>} />
         <Route path='/teachers/panel/login' element = {<TeachersLogin/>} />
+        <Route path='/teachers/panel/dashboard' element = {<mainDashboard/>} />
         <Route path='/student/portfolio/login' element = {<StudentLogin />} />
         <Route path='/contact' element = {<ContactPage/>}/>
       </Routes>

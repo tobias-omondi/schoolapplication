@@ -2,6 +2,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import teacherimge from '/src/assets/teacher.avif'
 import Footer from '../Footer/Footer'
+  
+  // usenavigate prompt
+
+import { useNavigate } from 'react-router-dom'
 
 const TeachersLogin = () => {
   // Animation variants
@@ -51,6 +55,15 @@ const TeachersLogin = () => {
     boxShadow: "0 0 0 2px rgba(59, 130, 246, 0.5)",
     transition: { duration: 0.2 }
   }
+
+  const navigate = useNavigate ()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    
+    navigate("/teachers/panel/dashboard")  
+  }
+
 
   return (
     <>
@@ -106,6 +119,7 @@ const TeachersLogin = () => {
             <motion.form 
               className="flex flex-col space-y-6"
               variants={containerVariants}
+              onSubmit={handleSubmit} 
             >
               <motion.div variants={itemVariants}>
                 <label htmlFor="Uname" className="block text-gray-700 font-medium mb-2 font-serif">
