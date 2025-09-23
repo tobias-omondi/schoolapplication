@@ -31,7 +31,7 @@ const AboutHeroSection = () => {
             whileInView={{ y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
-            className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6  underline decoration-1 underline-offset-8  font-['Nata sans']" 
+            className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6  underline decoration-1 underline-offset-8 " 
           >
             A Word From Our Director
           </motion.h1>
@@ -41,7 +41,7 @@ const AboutHeroSection = () => {
             whileInView={{ y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
-            className="text-center md:text-left text-lg leading-relaxed font-light font-['Fredoka'] "
+            className="text-center md:text-left text-lg leading-relaxed font-light "
           >
             At BrightOak Academy, we believe education is not just about academics but about
             shaping the whole person. Every child who walks through our gates carries unique gifts,
@@ -99,7 +99,7 @@ const AboutHeroSection = () => {
             whileInView={{ y: 0,  filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
-            className="text-center md:text-left text-lg font-light leading-relaxed font-light font-['Fredoka']" 
+            className="text-center md:text-left text-lg font-light leading-relaxed font-light" 
           >
             For over<span className='text-blue-500  underline decoration-1 underline-offset-2'> 25 years, BrightOak Academy </span> has been a place where young minds are nurtured, talents are discovered, and futures are shaped. What began as a small community of passionate educators has grown into a respected institution, committed to providing quality junior high school education.
             <br /> <br />
@@ -127,7 +127,7 @@ const AboutHeroSection = () => {
               //  animate={{ y: 0, scale: 1.0 }}
               //  transition={{ duration: 1.4, ease: "easeOut"  }}
               // //  viewport={{ once: true }}
-               className="text-center md:text-left text-lg leading-relaxed font-light font-['Fredoka']" 
+               className="text-center md:text-left text-lg leading-relaxed font-light" 
           >At BrightOak Academy, our Junior High School program provides a strong academic foundation while nurturing character, creativity, and confidence. We prepare students for the future by combining quality teaching with life skills, leadership opportunities, and co-curricular activities that inspire growth both inside and outside the classroom.</motion.p>
       </motion.div>
 
@@ -139,7 +139,7 @@ const AboutHeroSection = () => {
          viewport={{ once: true }}>
         <h1 className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6 underline decoration-1 underline-offset-4 font-['Nata sans']" >Our Path to Success</h1>
         <p
-         className=" text-center md:text-left text-lg leading-relaxed font-light font-['Fredoka']" >At BrightOak Academy, success is not defined by a single achievement, but by the continuous journey of growth, learning, and perseverance. From the beginning, our mission has been to nurture curious minds, instill strong values, and empower students to reach their fullest potential.</p> 
+         className=" text-center md:text-left text-lg leading-relaxed font-light" >At BrightOak Academy, success is not defined by a single achievement, but by the continuous journey of growth, learning, and perseverance. From the beginning, our mission has been to nurture curious minds, instill strong values, and empower students to reach their fullest potential.</p> 
          <li>
           <ul> <span className='font-medium'>Excellence in Education:</span> <br/>providing quality teaching and innovative learning experiences.</ul>
         </li>

@@ -62,8 +62,6 @@
   font-size: 48px;
   font-weight: bolder;
   color: rgb(255, 255, 255);
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   
@@ -72,8 +70,6 @@
 .hero-headings p {
   font-size: 22px;
   font-weight: bold;
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
@@ -162,8 +158,6 @@
 .card-number {
   font-size: 28px;
   color: #07a1fa;
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
 }
@@ -173,8 +167,6 @@
   color: rgb(77, 77, 77);
   margin: 0.5rem 0;
   font-size: 18px;
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
 }
@@ -182,15 +174,11 @@
 .card-description {
   font-size: 14px;
   color: rgb(77, 77, 77);
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 .herolast-fonts{
   color: rgb(77, 77, 77);
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -230,7 +218,6 @@
 
 .hero-heading-button button{
   font-size: 16px;
-  font-family: "Lato", sans-serif;
   margin: 0 auto;
   text-align: center;
 }

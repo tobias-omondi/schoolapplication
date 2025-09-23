@@ -67,7 +67,7 @@ const ContactPage = () => {
 
       <motion.div className='p-6'>
 
-       <motion.h1   className="text-gray-600 text-start md:text-left mt-5 font-bold text-4xl mb-4 font-serif "  variants={itemVariants}
+       <motion.h1   className="text-gray-600 text-start md:text-left mt-5 font-bold text-4xl mb-4 "  variants={itemVariants}
        >Contact <span className='text-blue-500' 
        animate={{ 
          color: ["#3b82f6", "#1d4ed8", "#3b82f6"],
@@ -112,7 +112,7 @@ const ContactPage = () => {
                     variants={containerVariants}
                   >
                     <motion.div variants={itemVariants}>
-                      <label htmlFor="Uname" className="block text-gray-700 font-medium mb-2 font-serif">
+                      <label htmlFor="Uname" className="block text-gray-700 font-medium mb-2">
                         Username & Student ID
                       </label>
                       <motion.input 
@@ -128,7 +128,7 @@ const ContactPage = () => {
                     </motion.div>
                     
                     <motion.div variants={itemVariants}>
-                      <label htmlFor="Password" className="block text-gray-700 font-medium mb-2 font-serif">
+                      <label htmlFor="Password" className="block text-gray-700 font-medium mb-2 ">
                         Password
                       </label>
                       <motion.input 
@@ -156,14 +156,14 @@ const ContactPage = () => {
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                         />
-                        <label htmlFor="remember" className="ml-2 block text-sm text-gray-700 font-serif">
+                        <label htmlFor="remember" className="ml-2 block text-sm text-gray-700">
                           Remember me
                         </label>
                       </div>
                       
                       <motion.a 
                         href="#" 
-                        className="text-sm text-blue-600 hover:text-blue-800 font-serif"
+                        className="text-sm text-blue-600 hover:text-blue-800 "
                         whileHover={{ 
                           scale: 1.05,
                           textDecoration: "underline"
@@ -181,7 +181,7 @@ const ContactPage = () => {
                     >
                       <motion.button 
                         type="submit" 
-                        className="w-1/2 bg-blue-600 text-white py-3 px-6 rounded-full font-medium hover:bg-blue-700 shadow-md cursor-pointer font-serif"
+                        className="w-1/2 bg-blue-600 text-white py-3 px-6 rounded-full font-medium hover:bg-blue-700 shadow-md cursor-pointer "
                         initial={{ opacity: 0 }}
                         animate={{ 
                           opacity: 1,

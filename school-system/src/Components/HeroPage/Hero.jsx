@@ -144,14 +144,14 @@ const Hero = () => {
                         className="max-w-2xl"
                       >
                         <h1 
-                          className="text-4xl font-['Nata sans']  sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight"
+                          className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight"
                           onMouseEnter={textEnter}
                           onMouseLeave={textLeave}
                         >
                           {item.title}
                         </h1>
                         <p 
-                          className="text-lg md:text-xl font-['Fredoka'] text-white mb-8"
+                          className="text-lg md:text-xl text-white mb-8"
                           onMouseEnter={textEnter}
                           onMouseLeave={textLeave}
                         >

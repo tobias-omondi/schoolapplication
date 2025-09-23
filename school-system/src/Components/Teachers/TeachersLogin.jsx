@@ -79,7 +79,7 @@ const TeachersLogin = () => {
           variants={containerVariants}
         >
           <motion.h1 
-            className="text-gray-600 text-start mt-5 font-bold text-4xl mb-4 font-serif"
+            className="text-gray-600 text-start mt-5 font-bold text-4xl mb-4"
             variants={itemVariants}
           >
             Teachers <motion.span 
@@ -122,13 +122,13 @@ const TeachersLogin = () => {
               onSubmit={handleSubmit} 
             >
               <motion.div variants={itemVariants}>
-                <label htmlFor="Uname" className="block text-gray-700 font-medium mb-2 font-serif">
+                <label htmlFor="Uname" className="block text-gray-700 font-medium mb-2">
                   Username
                 </label>
                 <motion.input 
                   type="text" 
                   id="Uname"  
-                  className="w-full md:w-3/4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none font-serif"
+                  className="w-full md:w-3/4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
                   placeholder="Enter your username"
                   whileFocus={inputFocusEffect}
                   initial={{ x: -20, opacity: 0 }}
@@ -138,7 +138,7 @@ const TeachersLogin = () => {
               </motion.div>
               
               <motion.div variants={itemVariants}>
-                <label htmlFor="Password" className="block text-gray-700 font-medium mb-2 font-serif">
+                <label htmlFor="Password" className="block text-gray-700 font-medium mb-2 ">
                   Password
                 </label>
                 <motion.input 
@@ -166,14 +166,14 @@ const TeachersLogin = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   />
-                  <label htmlFor="remember" className="ml-2 block text-sm text-gray-700 font-serif">
+                  <label htmlFor="remember" className="ml-2 block text-sm text-gray-700">
                     Remember me
                   </label>
                 </div>
                 
                 <motion.a 
                   href="#" 
-                  className="text-sm text-blue-600 hover:text-blue-800 font-serif"
+                  className="text-sm text-blue-600 hover:text-blue-800"
                   whileHover={{ 
                     scale: 1.05,
                     textDecoration: "underline"

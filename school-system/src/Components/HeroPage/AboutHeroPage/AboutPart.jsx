@@ -17,7 +17,7 @@ const AboutPart = ({title, description , image}) => {
        viewport={{once: true}}
        className='aboutpart-headings'>
         <h1 className='text-blue-500 underline'>{title}</h1>
-        <p className="font-['Fredoka']">{description}</p>
+        <p >{description}</p>
       </motion.div>
 
       <motion.div
