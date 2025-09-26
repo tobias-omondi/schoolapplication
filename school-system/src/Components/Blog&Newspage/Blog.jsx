@@ -23,7 +23,7 @@ const Blog = () => {
         <div className='flex flex-col px-5 mt-10 py-5'>
           <h1 className='text-2xl text-gray-700 underline underline-offset-2 text-center'>The Swimming Program at BrightOak Academy</h1>
 
-          <p className='lg:w-5/6 font-light mt-4 text-center'>At BrightOak Academy, the swimming pool is more than just water it’s a place where students build strength, confidence, and resilience. Every stroke teaches discipline, every lap builds endurance, and every splash carries the joy of growth. From beginners learning to float to advanced swimmers chasing records, the pool is where determination meets fun, and where BrightOak students dive into excellence.</p>
+          <p className='font-light mt-4 text-center'>At BrightOak Academy, the swimming pool is more than just water it’s a place where students build strength, confidence, and resilience. Every stroke teaches discipline, every lap builds endurance, and every splash carries the joy of growth. From beginners learning to float to advanced swimmers chasing records, the pool is where determination meets fun, and where BrightOak students dive into excellence.</p>
         </div>
       </div>
 
