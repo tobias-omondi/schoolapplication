@@ -5,10 +5,10 @@ import studentsswimming from "/src/assets/studentsswimming.jpg"
 const Blog = () => {
   return (
     <div>
-      <div className='relative bg-blue-700 p-24'>
+      <div className='relative bg-blue-800 p-24'>
       </div>
       <div className='absolute top-48 left-10'>
-       <h1 className='text-white lg:text-5xl font-light'>Our Blog Post</h1>
+       <h1 className='text-white lg:text-3xl font-bold'>Our Blog Post</h1>
       </div>
 
       {/* Topic about a blog post and an image */}
@@ -20,8 +20,8 @@ const Blog = () => {
 
         {/* text & description */}
 
-        <div className='flex flex-col px-5 mt-10 py-5'>
-          <h1 className='text-2xl text-gray-700 underline underline-offset-2 text-center'>The Swimming Program at BrightOak Academy</h1>
+        <div className='flex flex-col px-5 mt-5 py-5'>
+          <h1 className='text-2xl text-gray-700 underline underline-offset-8 text-center'>The Swimming Program at BrightOak Academy</h1>
 
           <p className='font-light mt-4 text-center'>At BrightOak Academy, the swimming pool is more than just water it’s a place where students build strength, confidence, and resilience. Every stroke teaches discipline, every lap builds endurance, and every splash carries the joy of growth. From beginners learning to float to advanced swimmers chasing records, the pool is where determination meets fun, and where BrightOak students dive into excellence.</p>
         </div>
