@@ -67,15 +67,15 @@ const ContactPage = () => {
         >
           <motion.div className="p-6">
             <motion.h1
-              className="text-gray-600 text-start md:text-left mt-5 font-bold text-4xl mb-4"
+              className="text-gray-600 text-start md:text-left mt-5 font-medium text-4xl mb-4"
               variants={itemVariants}
             >
               Contact{" "}
               <motion.span
-                className="text-blue-500"
-                animate={{
-                  color: ["#3b82f6", "#1d4ed8", "#3b82f6"],
-                }}
+                className="text-gray-600"
+                // animate={{
+                //   color: ["#3b82f6", "#1d4ed8", "#3b82f6"],
+                // }}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
@@ -87,7 +87,7 @@ const ContactPage = () => {
             </motion.h1>
 
             <motion.p
-              className="md:text-start font-serif text-start"
+              className="md:text-start text-start text-gray-500"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -97,7 +97,7 @@ const ContactPage = () => {
             </motion.p>
 
             <motion.h2
-              className="md:text-start font-serif text-start text-xl mt-5 text-gray-600"
+              className="md:text-start text-start text-xl mt-5 text-gray-600 font-light"
               variants={itemVariants}
             >
               Have questions or need assistance? Our team is always ready to

@@ -14,6 +14,7 @@ const navLinks = [
   { id: 2, name: 'About', path: '/about' },
   { id: 3, name: 'Education', path: '/education' },
   { id: 4, name: 'Blog', path: '/blog' },
+  { id: 4, name: 'News', path: '/news' },
   // { id: 6, name: 'School Life', path: '/school life' },
   { id: 5, name: 'Enquire Now', path: '/contact' },
 ];
@@ -38,12 +39,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Desktop dropdown states
-  const [isPortfolioDropdownOpen, setIsPortfolioDropdownOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
   const [isEducationDroplinksOpen, setEducationDroplinksOpen] = useState(false);
 
   // Mobile dropdown states
-  const [isMobilePortfolioDropdownOpen, setIsMobilePortfolioDropdownOpen] = useState(false);
   const [isMobileAboutDropdownOpen, setIsMobileAboutDropdownOpen] = useState(false);
   const [isMobileEducationlinksOpen, setMobileEducationlinksOpen] = useState(false);
 

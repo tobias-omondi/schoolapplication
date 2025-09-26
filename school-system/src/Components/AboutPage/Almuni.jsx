@@ -9,7 +9,7 @@ import childthree from '/src/assets/student-7468798_1280.jpg'
 
 const alumniImages = [
   {id: 1, image: childone, name: "Mike Mutsiya", occupation: "software developer"},
-  {id: 1, image: childtwo, name: "Charline Mugo", occupation: "managing farming and Poultry"},
+  {id: 1, image: childtwo, name: "Mercy mwilu", occupation: "managing farming and Poultry"},
   {id: 1, image: childthree, name: "Morgan Olivia", occupation: "Teacher at international school"}
 ]
 
@@ -32,7 +32,7 @@ const Alumni = () => {
       {/* Alumni title & description */}
 
       <div className='mt-5'>
-        <h1 className="text-end px-6 text-blue-400 text-4xl font-medium underline underline-offset-2  font-['Nata sans']" > Celebrating Our Alumni</h1>
+        <h1  className="text-start px-3 text-gray-700 text-4xl font-light" > Celebrating Our Alumni</h1>
 
         <p  className="mt-4 text-lg leading-relaxed font-light text-gray-800 px-3 py-2">  
              At BrightOak Academy, our alumni are the living proof of our mission leaders, creators, and
@@ -46,11 +46,11 @@ const Alumni = () => {
 
       {/* our success stories */}
 
-      <div className='mt-5'>
-        <h1 className="text-start px-3 text-blue-400 text-4xl font-medium underline underline-offset-2  font-['Nata sans']" >Our Success Stories</h1>
-        <p  className="mt-4 text-lg leading-relaxed font-light text-gray-800 px-3 py-2">
+      <div className='mt-10'>
+        <h1 className="text-start px-3 text-gray-700 text-4xl font-light" >Our Success Stories</h1>
+        <p  className="mt-4 text-lg leading-relaxed font-light text-gray-800 px-3 py-2 lg:w-3/4">
           Our alumni are living proof of the values and vision of BrightOak Academy.  
-          Their achievements—whether in education, business, community service, or the arts—are stories of
+          Their achievements—whether in education, business, community service, or the arts are stories of
           resilience, determination, and excellence.  
           <br />
           These success stories inspire our current students to dream bigger, work harder, and make a
@@ -68,7 +68,7 @@ const Alumni = () => {
           alt={alumni.name}
           className="w-full object-cover rounded"
         />
-        <h2 className="mt-3 text-lg font-medium text-center lg:text-3xl">{alumni.name}</h2>
+        <h2 className="mt-3 text-lg font-medium text-center  text-gray-700 lg:text-3xl">{alumni.name}</h2>
         <p className="text-gray-600 text-center lg:text-2xl font-extralight p-5">{alumni.occupation}</p>
       </div>
           

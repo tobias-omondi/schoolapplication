@@ -17,7 +17,7 @@ const OurStories = () => {
       {/* title of the page */}
 
       <div className='absolute z-50 top-4/5 right-4/5 transform translate-x-1/2 translate-y-1/2'>
-      <h1 className='text-white text-4xl font-bold underline underline-offset-4 decoration-blue-500'>OUR STORIES</h1></div>
+      <h1 className='text-white text-4xl font-bold'>OUR STORIES</h1></div>
 
       <div className='mt-5'>
         <Footer />
