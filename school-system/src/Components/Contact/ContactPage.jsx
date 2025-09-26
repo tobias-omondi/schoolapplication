@@ -97,7 +97,7 @@ const ContactPage = () => {
             </motion.p>
 
             <motion.h2
-              className="md:text-start text-start text-xl mt-5 text-gray-600 font-light"
+              className="md:text-start text-start  mt-5 text-gray-600 font-light"
               variants={itemVariants}
             >
               Have questions or need assistance? Our team is always ready to
