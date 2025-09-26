@@ -2,7 +2,7 @@
 .news-title,
 .news-title h1 {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   color: rgb(71, 70, 70);
   padding: 20px;
@@ -21,6 +21,7 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 }
 
@@ -46,6 +47,7 @@
   margin: 12px;
   color: #253846;
   font-weight: 600;
+  text-align: center;
 }
 
 .newsdata-container p {
@@ -54,21 +56,22 @@
   margin: 0 12px 12px;
   line-height: 1.4;
   font-weight: 400;
+  text-align: end;
 }
-
 
 .news-btn{
-  padding-left: 20px;
+  padding-left: 50px;
+
 }
 .news-btn button{
-  display: flex;
   background-color: transparent;
-  padding: 13px 20px;
-  border-radius: 10px;
-  font-weight: 700;
-  color: #002B5B;
+  color: rgb(46, 45, 45);
+  padding: 5px 30px;
+  border-radius: 8px;
+  border: 1px solid rgb(56, 56, 56);
+  font-weight: 600;
   cursor: pointer;
-  border: 1.4px solid black;
+  transition: all 0.3s ease;
   transition: ease-in-out 0.8;
   transition-delay: 0.8 ;
 }

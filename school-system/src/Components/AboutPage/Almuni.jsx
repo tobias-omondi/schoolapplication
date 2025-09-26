@@ -34,7 +34,7 @@ const Alumni = () => {
       <div className='mt-5'>
         <h1 className="text-end px-6 text-blue-400 text-4xl font-medium underline underline-offset-2  font-['Nata sans']" > Celebrating Our Alumni</h1>
 
-        <p  className="mt-4 text-lg leading-relaxed font-light text-gray-800 px-3 py-2 font-['Fredoka']">  
+        <p  className="mt-4 text-lg leading-relaxed font-light text-gray-800 px-3 py-2">  
              At BrightOak Academy, our alumni are the living proof of our mission leaders, creators, and
              changemakers making a difference in the world. From classrooms to careers, their journeys
              inspire the next generation to dream bigger and achieve more.  
@@ -48,7 +48,7 @@ const Alumni = () => {
 
       <div className='mt-5'>
         <h1 className="text-start px-3 text-blue-400 text-4xl font-medium underline underline-offset-2  font-['Nata sans']" >Our Success Stories</h1>
-        <p  className="mt-4 text-lg leading-relaxed font-light text-gray-800 px-3 py-2 font-['Fredoka']">
+        <p  className="mt-4 text-lg leading-relaxed font-light text-gray-800 px-3 py-2">
           Our alumni are living proof of the values and vision of BrightOak Academy.  
           Their achievements—whether in education, business, community service, or the arts—are stories of
           resilience, determination, and excellence.  
@@ -68,8 +68,8 @@ const Alumni = () => {
           alt={alumni.name}
           className="w-full object-cover rounded"
         />
-        <h2 className="mt-3 text-lg font-medium text-center font-['Nata Sans'] lg:text-3xl">{alumni.name}</h2>
-        <p className="text-gray-600 text-center font-[Fredoka] lg:text-2xl font-extralight p-5">{alumni.occupation}</p>
+        <h2 className="mt-3 text-lg font-medium text-center lg:text-3xl">{alumni.name}</h2>
+        <p className="text-gray-600 text-center lg:text-2xl font-extralight p-5">{alumni.occupation}</p>
       </div>
           
         ))}

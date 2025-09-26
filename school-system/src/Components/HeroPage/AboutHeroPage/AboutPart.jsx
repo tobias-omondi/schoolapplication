@@ -16,7 +16,7 @@ const AboutPart = ({title, description , image}) => {
        transition={{ duration: 1, ease: "easeOut" }} 
        viewport={{once: true}}
        className='aboutpart-headings'>
-        <h1 className='text-blue-500 underline'>{title}</h1>
+        <h1 className='text-gray-700 underline'>{title}</h1>
         <p >{description}</p>
       </motion.div>
 

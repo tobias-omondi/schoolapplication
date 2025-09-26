@@ -37,7 +37,7 @@
   text-align: center;
   padding: 3px;
   color: rgb(70, 68, 68);
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -48,7 +48,7 @@
   margin-bottom: 10px;
   color: rgb(88, 85, 85);
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
   padding: 10px;
   font-style: normal;
 }
@@ -141,10 +141,11 @@
   /* background-color: #dee1e4; */
   display: flex;
   justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  gap: 30px;
-  flex-wrap: wrap; /* responsive */
+  padding: 40px 30px;
+  /* gap: 30px; */
+  flex-wrap: wrap; 
 }
 
 .gallery-text {
@@ -155,26 +156,26 @@
 }
 
 .gallery-text h1 {
-  font-size: 2rem;
+  font-size: 36px;
   margin-bottom: 10px;
-  font-weight: 700;
-  color: rgb(46, 46, 46);
+  font-weight: 400;
+  color: rgb(63, 61, 61);
 }
 
 .gallery-text p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: rgb(61, 61, 61);
+  color: rgb(36, 36, 36);
   font-weight: 400;
 }
 
 .gallery-btn {
   background-color: transparent;
-  color: rgb(27, 27, 27);
+  color: rgb(46, 45, 45);
   padding: 10px 18px;
   border-radius: 8px;
-  border: 2px solid black;
+  border: 1px solid rgb(56, 56, 56);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;

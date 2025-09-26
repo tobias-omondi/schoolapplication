@@ -116,10 +116,10 @@ const SliderHome = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
+                  <h3 className="text-xl md:text-2xl font-medium text-gray-700 mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 font-light">
                     {item.description}
                   </p>
                 </div>

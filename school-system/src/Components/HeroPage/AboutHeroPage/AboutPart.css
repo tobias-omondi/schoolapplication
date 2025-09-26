@@ -16,7 +16,7 @@
 .aboutpart-headings h1 {
   font-size: 26px;
   margin: 0.5rem 0;
-  font-weight: 700;
+  font-weight: 400;
 
 }
 
@@ -24,7 +24,7 @@
   font-size: 16px;
   color: #4d4d4d;
   margin: 0.5rem 0;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.6;
 }
 
@@ -53,6 +53,7 @@
 
   .aboutpart-headings h1 {
     font-size: 32px;
+    font-weight: 400;
   }
 
   .aboutpart-headings p {
