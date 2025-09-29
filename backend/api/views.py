@@ -3,8 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 
 from rest_framework import viewsets
-from .models import Students, Class , Teachers , StudentsProfile , PortfolioAchievements , Subjects , Parents, TeacherComments , News , Blog
-from .serializers import StudentSerializer ,ClassSerializer , TeacherSerializer ,StudentProfileSerializer , SubjectsSerializer , PortfolioSerializer , ParentsSerializer ,TcommentsSerializer , NewsSerializer , BlogSerializer
+from .models import Students, Class , Teachers , StudentsProfile , PortfolioAchievements , Subjects , Parents, TeacherComments , News , Blog, Events
+from .serializers import StudentSerializer ,ClassSerializer , TeacherSerializer ,StudentProfileSerializer , SubjectsSerializer , PortfolioSerializer , ParentsSerializer ,TcommentsSerializer , NewsSerializer , BlogSerializer, EventsSerializer
 
 from rest_framework.permissions import IsAuthenticated
 
@@ -96,6 +96,16 @@ class BlogsViewSet (viewsets.ModelViewSet):
     queryset = Blog.objects.all()
 
     serializer_class = BlogSerializer
+
+
+# --SCHOOL Events ---
+
+class EventsViewSet (viewsets.ModelViewSet):
+
+    queryset = Events.objects.all()
+
+    serializer_class = EventsSerializer
+
 
 
 

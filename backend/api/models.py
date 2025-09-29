@@ -122,6 +122,15 @@ class Blog(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
 
+#  ----Events MODEL ---
+
+class Events (models.Model):
+    image = models.ImageField (upload_to='eventsimages/', null=True, blank= True)
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+
+
+
 
 # ---- SIGNALS TO UPDATE STUDENT COUNT ----
 @receiver(post_save, sender=Students)

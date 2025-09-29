@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Students, Class , Teachers , StudentsProfile , PortfolioAchievements ,Subjects ,Parents , TeacherComments , News , Blog
+from .models import Students, Class , Teachers , StudentsProfile , PortfolioAchievements ,Subjects ,Parents , TeacherComments , News , Blog, Events
 
 # --CLASS SERIALIZER--
 class ClassSerializer (serializers.ModelSerializer):
@@ -77,4 +77,12 @@ class BlogSerializer (serializers.ModelSerializer):
   class Meta:
     model = Blog
     fields = '__all__'
+
+# ---CLASS SERIALIZER --
+class EventsSerializer (serializers.ModelSerializer):
+
+  class Meta:
+    model = Events
+    fields = '__all__'
+
 
