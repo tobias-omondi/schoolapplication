@@ -43,10 +43,10 @@ postgress
     pip install -r requirements.txt
 ## creating migration
     python manage.py makemigrations
-    python manage.py makemigrations myapp
+    python manage.py makemigrations api
 ## applying migration
     python manage.py migrate
-    python manage.py migrate myapp
+    python manage.py migrate api
 ## run development server
     python manage.py runserver
      
