@@ -10,7 +10,7 @@ const fetchNews = async() => {
 };
 
 const fetchEvents = async() => {
-  const resp = await axios.get ("api")
+  const resp = await axios.get ("https://schoolapplication-btwi.onrender.com/api/events/")
   return resp.data;
 };
 
@@ -21,10 +21,10 @@ const News = () => {
       queryFn: fetchNews, 
     });
 
-  // const {data:events, isLoading, error} = useQuery ({
-  //   queryKey:["news"],
-  //   queryFn: fetchEvents
-  // });
+  const {data:events, is_Loading, err_or} = useQuery ({
+    queryKey:["events"],
+    queryFn: fetchEvents
+  });
 
   return (
     <div>
@@ -69,6 +69,28 @@ const News = () => {
 
           {/* map the comming events here */}
           <h1 className='text-2xl text-gray-700 font-light text-center' >Upcoming Events</h1></div>
+        
+          <div className="grid gap-4 mt-8 p-5  lg:ml-10 rounded">
+          {is_Loading && <p>Loading news...</p>}
+          {err_or && <p>Failed to fetch news</p>}
+
+       {events &&
+         events.slice(0, 5).map((events) => (
+         <div
+         key={events.id}
+         className="p-2 border border-blue-400 items-center mx-auto rounded shadow hover:shadow-lg transition bg-white"
+        >
+        <img
+          src={events.image}
+          alt="news post"
+          className="w-full h-48 object-cover rounded-md mb-4"
+        />
+        <h2 className="font-semibold text-lg mb-2 text-gray-700">{events.title}</h2>
+        <p className="text-gray-600 line-clamp-3">{events.content}</p>
+      </div>
+       ))}
+    </div>
+
       </div>
 
 
