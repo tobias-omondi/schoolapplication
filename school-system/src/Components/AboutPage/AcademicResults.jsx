@@ -53,7 +53,7 @@ const AcademicResults = () => {
       {/* Intro */}
       <div className='mt-5 px-3'>
         <h1 className='text-gray-700 font-medium text-2xl'>Academic Results & Performance</h1>
-        <p className='text-gray-600'>
+        <p className='text-gray-600 font-light'>
           At BrightOak Academy, academic excellence is at the core of our mission. Our results reflect both hard work <br /> 
           and commitment to holistic education.
         </p>
@@ -62,7 +62,7 @@ const AcademicResults = () => {
       {/* Management Word */}
       <div className='mt-5 px-3'>
         <h1 className='text-gray-700 font-medium text-2xl'>A Word from School Management</h1>
-        <p className='text-gray-600'>
+        <p className='text-gray-600 font-light'>
           At BrightOak Academy, we take great pride in the consistent achievements of our students. Year after year, their results reflect not only academic excellence but also discipline, resilience, and the unwavering support of our dedicated teachers. We believe every child has unique potential, and these performances prove that with the right guidance, success is not just possible — it’s inevitable. As management, we remain committed to providing an environment where every learner thrives academically and personally.
         </p>
       </div>
@@ -78,7 +78,7 @@ const AcademicResults = () => {
             className='rounded-xl w-4/5 md:w-1/2 object-cover'
           />
 
-          <p>
+          <p className='font-light text-gray-600'>
             The <span className='text-blue-500 underline'>2025 class at BrightOak Academy</span> has set a remarkable standard of excellence. With a strong balance across sciences, arts, and humanities, our learners have showcased both academic discipline and creativity. This year’s results reflect the school’s steady growth and commitment to nurturing well-rounded achievers.
           </p>
         </div>
@@ -89,10 +89,10 @@ const AcademicResults = () => {
         <h1 className='text-gray-600 text-2xl'>Congratulation Class of 2025!</h1>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 px-5 text-center">
-        <Counter target={30} duration={2} label="Achieved A*" />
-        <Counter target={55} duration={2.5} label="Achieved A* - A" />
-        <Counter target={45} duration={2} label="Achieved A* - B+" />
-        <Counter target={15} duration={1.8} label="Achieved A* - C" />
+        <Counter target={30} duration={2} label="/Achieved A*" />
+        <Counter target={55} duration={2.5} label="/Achieved A* - A" />
+        <Counter target={45} duration={2} label="/Achieved A* - B+" />
+        <Counter target={15} duration={1.8} label="/Achieved A* - C" />
       </div>
 
       <div className='mt-10'>

@@ -29,10 +29,10 @@ const aboutDropLinks = [
 
 const educationDropLinks = [
   { id: 1, name: 'Education', path: '/education' },
-  { id: 2, name: 'KinderGarten Education', path: '/education/kindergarten' },
-  { id: 3, name: 'Pre-Primary Education', path: '/education/pre-primary' },
-  { id: 4, name: 'Primary Education', path: '/education/Primary' },
-  { id: 5, name: 'Junior Secondary Education', path: '/education/junior secondary' },
+  // { id: 2, name: 'KinderGarten Education', path: '/education/kindergarten' },
+  { id: 2, name: 'Pre-Primary Education', path: '/education/pre-primary' },
+  { id: 3, name: 'Primary Education', path: '/education/Primary' },
+  { id: 4, name: 'Junior Secondary Education', path: '/education/junior secondary' },
 ];
 
 const Navbar = () => {
