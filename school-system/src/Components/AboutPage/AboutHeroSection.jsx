@@ -31,7 +31,7 @@ const AboutHeroSection = () => {
             whileInView={{ y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
-            className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6  underline decoration-1 underline-offset-8 " 
+            className="text-gray-700 text-3xl font-bold text-center md:text-left mb-6" 
           >
             A Word From Our Director
           </motion.h1>
@@ -89,7 +89,7 @@ const AboutHeroSection = () => {
             whileInView={{ y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
-            className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6  underline decoration-1 underline-offset-8 font-['Nata sans']" 
+            className="text-gray-700 text-3xl font-bold text-center md:text-left mb-6" 
           >
             25 Years Of Expirence
           </motion.h1>
@@ -99,7 +99,7 @@ const AboutHeroSection = () => {
             whileInView={{ y: 0,  filter: 'blur(0px)' }}
             transition={{ duration: 1.4, ease: "easeOut"  }}
             viewport={{ once: true }}
-            className="text-center md:text-left text-lg font-light leading-relaxed font-light" 
+            className="text-center md:text-left text-lg font-light leading-relaxed" 
           >
             For over<span className='text-blue-500  underline decoration-1 underline-offset-2'> 25 years, BrightOak Academy </span> has been a place where young minds are nurtured, talents are discovered, and futures are shaped. What began as a small community of passionate educators has grown into a respected institution, committed to providing quality junior high school education.
             <br /> <br />
@@ -117,7 +117,7 @@ const AboutHeroSection = () => {
             // whileInView={{ scale: 1.0, filter: 'blur(0px)' }}
             // transition={{ duration: 1.4, ease: "easeOut"  }}
             // viewport={{ once: true }}
-            className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6 underline decoration-1 underline-offset-8 font-['Nata sans']"
+            className="text-gray-700 text-3xl font-bold text-center md:text-left mb-6 "
           >
             Junior HighSchool Education
           </motion.h1>
@@ -137,7 +137,7 @@ const AboutHeroSection = () => {
          whileInView={{ y: 0, filter: 'blur(0px)' }}
          transition={{ duration: 1.4, ease: "easeOut"  }}
          viewport={{ once: true }}>
-        <h1 className="text-blue-500 text-3xl font-bold text-center md:text-left mb-6 underline decoration-1 underline-offset-4 font-['Nata sans']" >Our Path to Success</h1>
+        <h1 className="text-gray-700 text-3xl font-bold text-center md:text-left mb-6" >Our Path to Success</h1>
         <p
          className=" text-center md:text-left text-lg leading-relaxed font-light" >At BrightOak Academy, success is not defined by a single achievement, but by the continuous journey of growth, learning, and perseverance. From the beginning, our mission has been to nurture curious minds, instill strong values, and empower students to reach their fullest potential.</p> 
          <li>
@@ -151,7 +151,12 @@ const AboutHeroSection = () => {
         </li> <br/>
       </motion.div>
 
-      <img src={playingbasketball} alt='students with books' className='object-cover'/>
+      <motion.img
+      initial = {{scale:0.8}}
+      whileHover={{scale: 1.03
+      }}
+      transition={{duration:0.7}}
+       src={playingbasketball} alt='students with books' className='object-cover mb-10 rounded'/>
       </motion.div>
 
       <Footer />

@@ -21,9 +21,9 @@ const navLinks = [
 
 const aboutDropLinks = [
   { id: 1, name: 'About', path: '/about' },
-  { id: 2, name: 'Our Stories', path: '/about/ourstories' },
-  { id: 3, name: 'Alumni', path: '/about/alumni' },
-  { id: 4, name: 'Academic Results', path: '/about/academic-results' },
+  // { id: 2, name: 'Our Stories', path: '/about/ourstories' },
+  { id: 2, name: 'Alumni', path: '/about/alumni' },
+  { id: 3, name: 'Academic Results', path: '/about/academic-results' },
 
 ];
 
